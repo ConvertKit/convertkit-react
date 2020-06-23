@@ -1,6 +1,6 @@
 <div align="center">
   <h1>ConvertKit React</h1>
-  <img src="https://github.com/convertkit/convertkit/tree/main/static/convertkit-react.png" alt="ConvertKit React Logo" />
+  <img src="https://raw.githubusercontent.com/ConvertKit/convertkit-react/main/static/convertKit-react.png" alt="ConvertKit React Logo" />
   <p>Easily plug convertkit forms to your React and Gatsby websites.</p>
 </div>
 
