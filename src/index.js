@@ -12,7 +12,7 @@ const InlineForm = ({
   emailLabel,
   newTabSubmit,
   }) => (
-  <form action={action} target={newTabSubmit ? '_blank' : 'self'}>
+  <form action={action} target={newTabSubmit ? '_blank' : '_self'}>
     {!hideName && (
       <>
         {showLabels ? <label>{nameLabel}</label> : null}
