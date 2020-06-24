@@ -19,7 +19,7 @@ const MY_FORM_ID = 1234567
 
 function HomePage() {
   return (
-    <ConvertKitForm formId={MY_FORM_ID} format="inline" />
+    <ConvertKitForm formId={MY_FORM_ID} />
   )
 }
 ```
@@ -30,7 +30,7 @@ function HomePage() {
 function HomePage() {
   const config = {
     formId: MY_FORM_ID,
-    format: 'minimal',
+    format: 'inline',
     emailPlaceholder: 'Enter an email address',
     submitText: 'Sign up',
   }
@@ -43,8 +43,10 @@ function HomePage() {
 
 ##### Configuration Options
 
-|  **option**  | **default option** | **value** |
+|  **option**  | **default option** | **options** |
 | :----------: | :----------------: | :-------------: |
+| format   | minimal | minimal, inline, slidein, sticky |
+| template   | clare | _Templates you see on the app_ |
 | submitText   | Submit | Any string |
 | emailPlaceholder   | Your email | Any string |
 | namePlaceholder   | Your first name | Any string |
