@@ -1,7 +1,7 @@
 import React from 'react'
 import logo from './logo.svg'
 import './App.css'
-import ConvertKitForm from './CKForm'
+import ConvertKitForm from 'convertkit-react'
 
 function App() {
 
