@@ -1,10 +1,10 @@
 {
   "name": "convertkit-react",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "React library to add convertkit forms to React applications",
-  "main": "src/index.js",
+  "main": "bin/convertkit-form.js",
   "scripts": {
-    "test": "mocha"
+    "build": "npx babel src/index.js -o bin/convertkit-form.js"
   },
   "repository": {
     "type": "git",
@@ -20,5 +20,11 @@
     "prop-types": "^15.7.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.10.3",
+    "@babel/core": "^7.10.3",
+    "@babel/preset-env": "^7.10.3",
+    "@babel/preset-react": "^7.10.1"
   }
 }
