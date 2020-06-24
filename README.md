@@ -8,7 +8,7 @@
 ## Setup
 
 ```sh
-yarn add @convertkit/convertkit-react
+yarn add convertkit-react
 ```
 
 ### Usage
