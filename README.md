@@ -67,3 +67,13 @@ function HomePage() {
 |    showLabels   |       false      |     boolean          |
 |     hideName    |       false      |     boolean          |
 |     newTab      |       false      |     boolean          |
+
+
+## Contributing
+To publish a package:
+
+```sh
+./publish X.X.X "Message about version"
+```
+
+where `X.X.X` is the version number.
