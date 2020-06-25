@@ -1,11 +1,10 @@
 {
   "name": "convertkit-react",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "React library to add convertkit forms to React applications",
   "main": "bin/convertkit-form.js",
   "scripts": {
-    "build": "npx babel src/index.js -o bin/convertkit-form.js",
-    "publish": "npm run build && npm publish"
+    "build": "npx babel src/index.js -o bin/convertkit-form.js"
   },
   "repository": {
     "type": "git",

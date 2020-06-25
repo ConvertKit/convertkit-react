@@ -9,6 +9,16 @@ var _react = _interopRequireDefault(require("react"));
 
 var _propTypes = _interopRequireDefault(require("prop-types"));
 
+var _inline = _interopRequireDefault(require("./inline"));
+
+var _minimal = _interopRequireDefault(require("./minimal"));
+
+var _modal = _interopRequireDefault(require("./modal"));
+
+var _slidein = _interopRequireDefault(require("./slidein"));
+
+var _sticky = _interopRequireDefault(require("./sticky"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
@@ -21,76 +31,22 @@ function _objectWithoutProperties(source, excluded) { if (source == null) return
 
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 
-var InlineForm = function InlineForm(_ref) {
-  var action = _ref.action,
-      submitText = _ref.submitText,
-      emailPlaceholder = _ref.emailPlaceholder,
-      namePlaceholder = _ref.namePlaceholder,
-      hideName = _ref.hideName,
-      showLabels = _ref.showLabels,
-      nameLabel = _ref.nameLabel,
-      emailLabel = _ref.emailLabel,
-      newTabSubmit = _ref.newTabSubmit;
-  return /*#__PURE__*/_react.default.createElement("form", {
-    action: action,
-    method: "post",
-    target: newTabSubmit ? '_blank' : '_self'
-  }, !hideName && /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, showLabels ? /*#__PURE__*/_react.default.createElement("label", null, nameLabel) : null, /*#__PURE__*/_react.default.createElement("input", {
-    type: "text",
-    name: "fields[first_name]",
-    placeholder: namePlaceholder
-  })), showLabels ? /*#__PURE__*/_react.default.createElement("label", null, emailLabel) : null, /*#__PURE__*/_react.default.createElement("input", {
-    type: "email",
-    name: "email_address",
-    placeholder: emailPlaceholder
-  }), /*#__PURE__*/_react.default.createElement("button", {
-    type: "submit"
-  }, submitText));
-};
-
-var MinimalForm = function MinimalForm(_ref2) {
-  var action = _ref2.action,
-      submitText = _ref2.submitText,
-      emailPlaceholder = _ref2.emailPlaceholder,
-      namePlaceholder = _ref2.namePlaceholder,
-      hideName = _ref2.hideName,
-      showLabels = _ref2.showLabels,
-      nameLabel = _ref2.nameLabel,
-      emailLabel = _ref2.emailLabel,
-      newTabSubmit = _ref2.newTabSubmit;
-  return /*#__PURE__*/_react.default.createElement("form", {
-    action: action,
-    method: "post",
-    target: newTabSubmit ? '_blank' : '_self'
-  }, !hideName && /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, showLabels ? /*#__PURE__*/_react.default.createElement("label", null, nameLabel) : null, /*#__PURE__*/_react.default.createElement("input", {
-    type: "text",
-    name: "fields[first_name]",
-    placeholder: namePlaceholder
-  })), showLabels ? /*#__PURE__*/_react.default.createElement("label", null, emailLabel) : null, /*#__PURE__*/_react.default.createElement("input", {
-    type: "email",
-    name: "email_address",
-    placeholder: emailPlaceholder
-  }), /*#__PURE__*/_react.default.createElement("button", {
-    type: "submit"
-  }, submitText));
-};
-
 var formFormat = function formFormat(format, props) {
   var formatEmbeds = {
     inline: function inline() {
-      return /*#__PURE__*/_react.default.createElement(InlineForm, props);
+      return /*#__PURE__*/_react.default.createElement(_inline.default, props);
     },
     minimal: function minimal() {
-      return /*#__PURE__*/_react.default.createElement(MinimalForm, props);
+      return /*#__PURE__*/_react.default.createElement(_minimal.default, props);
     },
     modal: function modal() {
-      return null;
+      return /*#__PURE__*/_react.default.createElement(_modal.default, props);
     },
     slidein: function slidein() {
-      return null;
+      return /*#__PURE__*/_react.default.createElement(_slidein.default, props);
     },
     sticky: function sticky() {
-      return null;
+      return /*#__PURE__*/_react.default.createElement(_sticky.default, props);
     }
   };
 
@@ -102,11 +58,10 @@ var formFormat = function formFormat(format, props) {
   return formatEmbeds[format];
 };
 
-var ConvertKitForm = function ConvertKitForm(_ref3) {
-  var _ref3$format = _ref3.format,
-      format = _ref3$format === void 0 ? 'inline' : _ref3$format,
-      formId = _ref3.formId,
-      props = _objectWithoutProperties(_ref3, ["format", "formId"]);
+var ConvertKitForm = function ConvertKitForm(_ref) {
+  var format = _ref.format,
+      formId = _ref.formId,
+      props = _objectWithoutProperties(_ref, ["format", "formId"]);
 
   var action = "https://app.convertkit.com/forms/".concat(formId, "/subscriptions");
   return formFormat(format, _objectSpread({
@@ -125,7 +80,7 @@ ConvertKitForm.propTypes = {
   emailLabel: _propTypes.default.string,
   showLabels: _propTypes.default.bool,
   hideName: _propTypes.default.bool,
-  newTabSubmit: _propTypes.default.bool
+  newTab: _propTypes.default.bool
 };
 ConvertKitForm.defaultProps = {
   format: 'minimal',
@@ -137,7 +92,7 @@ ConvertKitForm.defaultProps = {
   emailLabel: 'Email',
   showLabels: false,
   hideName: false,
-  newTabSubmit: false
+  newTab: false
 };
 var _default = ConvertKitForm;
 exports.default = _default;
