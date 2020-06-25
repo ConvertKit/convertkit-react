@@ -4,14 +4,14 @@
   <p>Easily plug convertkit forms to your React and Gatsby websites.</p>
 </div>
 
-
 ## Setup
 
 ```sh
 yarn add convertkit-react
 ```
 
-### Usage
+## Usage
+
 ```jsx
 import ConvertKitForm from 'convertkit-react'
 
@@ -24,7 +24,19 @@ function HomePage() {
 }
 ```
 
-##### Passing custom configuration options
+To get your form id, go to the form you have created on convertkit and choose the HTML embed option.
+
+![form embed screenshot](https://raw.githubusercontent.com/ConvertKit/convertkit-react/main/static/embed-screenshot.png)
+
+Here you'll pick out your form id from the form action in the embed code:
+
+```html
+<form
+  action="https://app.convertkit.com/forms/YOUR_FORM_ID_IS_HERE/subscriptions"
+></form>
+```
+
+#### Passing custom configuration options
 
 ```jsx
 function HomePage() {
@@ -41,21 +53,17 @@ function HomePage() {
 }
 ```
 
-##### Configuration Options
+#### Configuration Options
 
-|  **option**  | **default option** | **options** |
-| :----------: | :----------------: | :-------------: |
-| format   | minimal | minimal, inline, slidein, sticky |
-| template   | clare | _Templates you see on the app_ |
-| submitText   | Submit | Any string |
-| emailPlaceholder   | Your email | Any string |
-| namePlaceholder   | Your first name | Any string |
-| nameLabel   | First name | Any string |
-| emailLabel   | Email | Any string |
-| showLabels   | false | boolean |
-| hideName   | false | boolean |
-| newTabSubmit   | false | boolean |
-
-
-
-
+|   **option**    |   **default option**   |  **options**   |
+| :-------------: | :--------------: | :------------------: |
+|   format   |   minimal   | minimal, inline, slidein, sticky |
+|     template    |      clare       | _templates in the app_ |
+|    submitText   |     Submit       |     any string       |
+| emailPlaceholder |    Your email   |     any string       |
+| namePlaceholder |  Your first name |     any string       |
+|    nameLabel    |     First name   |     any string       |
+|    emailLabel   |       Email      |     any string       |
+|    showLabels   |       false      |     boolean          |
+|     hideName    |       false      |     boolean          |
+|     newTab      |       false      |     boolean          |

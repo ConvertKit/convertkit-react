@@ -1,63 +1,20 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-
-const InlineForm = ({
-  action,
-  submitText,
-  emailPlaceholder,
-  namePlaceholder,
-  hideName,
-  showLabels,
-  nameLabel,
-  emailLabel,
-  newTabSubmit,
-  }) => (
-  <form action={action} method="post" target={newTabSubmit ? '_blank' : '_self'}>
-    {!hideName && (
-      <>
-        {showLabels ? <label>{nameLabel}</label> : null}
-        <input type="text" name="fields[first_name]" placeholder={namePlaceholder} />
-      </>
-    )}
-    {showLabels ? <label>{emailLabel}</label> : null}
-    <input type="email" name="email_address" placeholder={emailPlaceholder} />
-    <button type="submit">{ submitText }</button>
-  </form>
-)
-
-const MinimalForm = ({
-  action,
-  submitText,
-  emailPlaceholder,
-  namePlaceholder,
-  hideName,
-  showLabels,
-  nameLabel,
-  emailLabel,
-  newTabSubmit,
-  }) => (
-  <form action={action} method="post" target={newTabSubmit ? '_blank' : '_self'}>
-    {!hideName && (
-      <>
-        {showLabels ? <label>{nameLabel}</label> : null}
-        <input type="text" name="fields[first_name]" placeholder={namePlaceholder} />
-      </>
-    )}
-    {showLabels ? <label>{emailLabel}</label> : null}
-    <input type="email" name="email_address" placeholder={emailPlaceholder} />
-    <button type="submit">{ submitText }</button>
-  </form>
-)
+import InlineForm from './inline'
+import MinimalForm from './minimal'
+import ModalForm from './modal'
+import SlideInForm from './slidein'
+import StickyForm from './sticky'
 
 const formFormat = (format, props) => {
   const formatEmbeds = {
     inline: () => <InlineForm {...props} />,
     minimal: () => <MinimalForm {...props} />,
-    modal: () => null,
-    slidein: () => null,
-    sticky: () => null,
+    modal: () => <ModalForm {...props} />,
+    slidein: () => <SlideInForm {...props} />,
+    sticky: () => <StickyForm {...props} />,
   }
-  if(!formatEmbeds.hasOwnProperty(format)) {
+  if (!formatEmbeds.hasOwnProperty(format)) {
     const errorMessage = `This form format: "${format}" is not supported`
     throw new ReferenceError(errorMessage)
   }
@@ -65,7 +22,7 @@ const formFormat = (format, props) => {
   return formatEmbeds[format]
 }
 
-const ConvertKitForm = ({ format = 'inline', formId, ...props }) => {
+const ConvertKitForm = ({ format, formId, ...props }) => {
   const action = `https://app.convertkit.com/forms/${formId}/subscriptions`
   return formFormat(format, { action, ...props })()
 }
@@ -81,7 +38,7 @@ ConvertKitForm.propTypes = {
   emailLabel: PropTypes.string,
   showLabels: PropTypes.bool,
   hideName: PropTypes.bool,
-  newTabSubmit: PropTypes.bool,
+  newTab: PropTypes.bool,
 }
 
 ConvertKitForm.defaultProps = {
@@ -94,8 +51,7 @@ ConvertKitForm.defaultProps = {
   emailLabel: 'Email',
   showLabels: false,
   hideName: false,
-  newTabSubmit: false,
+  newTab: false,
 }
 
 export default ConvertKitForm
-
