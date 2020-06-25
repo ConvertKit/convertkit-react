@@ -55,7 +55,7 @@ function HomePage() {
 
 #### Configuration Options
 
-|   **option**    |   **default option**   |  **options**   |
+|   **property**  |   **default option**  |   **options**   |
 | :-------------: | :--------------: | :------------------: |
 |   format   |   minimal   | minimal, inline, slidein, sticky |
 |     template    |      clare       | _templates in the app_ |
