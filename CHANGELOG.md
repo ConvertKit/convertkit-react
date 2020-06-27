@@ -1,5 +1,9 @@
 # Convertkit React Changelog
 
+### [v1.0.8](https://github.com/ConvertKit/convertkit-react/releases/tag/v1.0.8) - (not released)
+
+- Change default submit text to "Subscribe"
+
 ### [v1.0.7](https://github.com/ConvertKit/convertkit-react/releases/tag/v1.0.7)
 
 - Added styles for inline clare template

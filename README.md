@@ -59,7 +59,7 @@ function HomePage() {
 | :-------------: | :--------------: | :------------------: |
 |   format   |   minimal   | minimal, inline, slidein, sticky |
 |     template    |      clare       | _templates in the app_ |
-|    submitText   |     Submit       |     any string       |
+|    submitText   |     Subscribe    |     any string       |
 | emailPlaceholder |    Your email   |     any string       |
 | namePlaceholder |  Your first name |     any string       |
 |    nameLabel    |     First name   |     any string       |

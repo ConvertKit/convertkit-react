@@ -44,7 +44,7 @@ ConvertKitForm.propTypes = {
 ConvertKitForm.defaultProps = {
   format: 'minimal',
   template: 'clare',
-  submitText: 'Submit',
+  submitText: 'Subscribe',
   emailPlaceholder: 'Your email',
   namePlaceholder: 'Your first name',
   nameLabel: 'First name',
