@@ -1,9 +1,8 @@
 import React from 'react'
-import './inline-styles.css'
 import useTemplate from './use-template'
 
 // TO-DO:
-// derive data-uid of user
+// derive data-uid of user and use to prefix CSS classes
 
 function InlineForm({
   template,
