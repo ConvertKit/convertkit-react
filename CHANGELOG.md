@@ -2,6 +2,7 @@
 
 ### [v1.0.8](https://github.com/ConvertKit/convertkit-react/releases/tag/v1.0.8) - (not released)
 
+- Add inline templates for Mills and Rainer
 - Change default submit text to "Subscribe"
 
 ### [v1.0.7](https://github.com/ConvertKit/convertkit-react/releases/tag/v1.0.7)

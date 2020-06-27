@@ -1,4 +1,6 @@
 import ClareInline from './templates/clare-inline'
+import MillsInline from './templates/mills-inline'
+import RainerInline from './templates/rainer-inline'
 
 const options = {
   settings: {
@@ -48,13 +50,15 @@ const options = {
       show_once_every: 15
     }
   },
+  uid: '',
   version: '5'
 }
 
 const renderTemplate = template => {
   const allTemplates = {
     clare: ClareInline,
-    mills: () => null,
+    mills: MillsInline,
+    rainer: RainerInline,
   }
 
   if (!allTemplates.hasOwnProperty(template)) {
