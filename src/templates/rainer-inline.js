@@ -1,7 +1,7 @@
 import React from 'react'
 import './rainer-styles.css'
 
-const bgImage = 'https://images.unsplash.com/photo-1593131087890-3632ad5f3231?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjExODA0N30&utm_source=convertkit&utm_medium=referral&utm_campaign=api-credit?fit=max&w=800'
+const bgImage = '//pages.convertkit.com/assets/rainier/bg.jpg'
 
 function RainerInline({
   options,
