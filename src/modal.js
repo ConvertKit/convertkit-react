@@ -1,27 +1,5 @@
-import React from 'react'
+import Form from './form'
 
-const ModalForm = ({
-  action,
-  submitText,
-  emailPlaceholder,
-  namePlaceholder,
-  hideName,
-  showLabels,
-  nameLabel,
-  emailLabel,
-  newTab,
-}) => (
-    <form action={action} method="post" target={newTab ? '_blank' : '_self'}>
-      {!hideName && (
-        <>
-          {showLabels ? <label>{nameLabel}</label> : null}
-          <input type="text" name="fields[first_name]" placeholder={namePlaceholder} />
-        </>
-      )}
-      {showLabels ? <label>{emailLabel}</label> : null}
-      <input type="email" name="email_address" placeholder={emailPlaceholder} />
-      <button type="submit">{submitText}</button>
-    </form>
-  )
+const ModalForm = Form
 
 export default ModalForm

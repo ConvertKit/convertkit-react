@@ -1,5 +1,9 @@
 # Convertkit React Changelog
 
+### [v1.0.10](https://github.com/ConvertKit/convertkit-react/releases/tag/v1.0.10)
+
+- Make all formats compatible with templates by default
+
 ### [v1.0.9](https://github.com/ConvertKit/convertkit-react/releases/tag/v1.0.9)
 
 - Change default background image of Rainer inline template

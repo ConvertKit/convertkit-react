@@ -17,7 +17,7 @@ function RainerInline({
   formId,
 }) {
   return (
-    <form action={action} className="seva-form formkit-form" method="post" target={newTab ? '_blank' : '_self'} data-sv-form="1484851" data-uid={formId} data-format="inline" data-version={options.version} data-options={options} min-width="400 500 600 700 800">
+    <form action={action} className="seva-form formkit-form" method="post" target={newTab ? '_blank' : '_self'} data-sv-form={formId} data-uid={options.uid} data-format="inline" data-version={options.version} data-options={options} min-width="400 500 600 700 800">
       <div className="formkit-container" data-style="full" style={{ backgroundColor: 'rgb(255, 255, 255)' }}>
         <div className="formkit-hero">
           <div className="formkit-hero-bg-color" style={{ backgroundColor: 'rgb(16, 16, 16)' }}></div>
