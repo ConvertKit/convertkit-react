@@ -1,5 +1,10 @@
 # Convertkit React Changelog
 
+### [v1.2.0](https://github.com/ConvertKit/convertkit-react/releases/tag/v1.2.0)
+
+- Enable input stacking customization
+- Use appropriate styles for rainer template
+
 ### [v1.1.0](https://github.com/ConvertKit/convertkit-react/releases/tag/v1.1.0)
 
 - Move minimal from being a format to being a template leaving 4 formats (inline, modal, sticky, slide-in)

@@ -13,6 +13,7 @@ function MillsInline({
   emailLabel,
   newTab,
   formId,
+  stacked,
 }) {
   return (
     <form action={action} className="seva-form formkit-form" method="post" target={newTab ? '_blank' : '_self'} data-sv-form={formId} data-uid={options.uid} data-format="inline" data-version={options.version} data-options={options} min-width="400 500 600 700 800" style={{ backgroundColor: 'rgb(249, 250, 251)', borderRadius: '4px' }}>
@@ -23,7 +24,7 @@ function MillsInline({
         </div>
         <div className="formkit-subheader" data-element="subheader" style={{ color: 'rgb(104, 104, 104)', fontsize: '18px' }}>Subscribe to get our latest content by email.</div>
         <ul className="formkit-alert formkit-alert-error" data-element="errors" data-group="alert"></ul>
-        <div data-element="fields" data-stacked="true" className="seva-fields formkit-fields">
+        <div data-element="fields" data-stacked={stacked} className="seva-fields formkit-fields">
           {!hideName && (
             <>
               {showLabels ? <label htmlFor="ck-first-name">{nameLabel}</label> : null}

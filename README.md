@@ -67,11 +67,16 @@ function HomePage() {
 |    showLabels   |       false      |     boolean          |
 |     hideName    |       false      |     boolean          |
 |     newTab      |       false      |     boolean          |
+|      stack      |        true      |     boolean          |
 
 ##### Templates
 The minimal template has no preconfigured styling, leaving you options to style
 as desired. To get a preconfigured style, use one of the app templates
 (clare, rainer, powell etc) as seen on the app.
+
+##### Stacking
+Using the stack option determines if the form inputs will be stacked upon each
+other or placed inline. All templates use stacked inputs by default.
 
 
 ## Contributing

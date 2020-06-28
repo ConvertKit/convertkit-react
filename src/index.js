@@ -37,6 +37,7 @@ ConvertKitForm.propTypes = {
   showLabels: PropTypes.bool,
   hideName: PropTypes.bool,
   newTab: PropTypes.bool,
+  stacked: PropTypes.bool,
 }
 
 ConvertKitForm.defaultProps = {
@@ -50,6 +51,7 @@ ConvertKitForm.defaultProps = {
   showLabels: false,
   hideName: false,
   newTab: false,
+  stacked: true,
 }
 
 export default ConvertKitForm

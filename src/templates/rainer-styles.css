@@ -534,7 +534,7 @@
 
 .formkit-form .formkit-fields[data-stacked="false"] .formkit-field,
 .formkit-form .formkit-fields[data-stacked="false"] .formkit-submit {
-  margin: 0 0 15px;
+  margin: 0 0 15px !important;
 }
 
 .formkit-form .formkit-fields[data-stacked="false"] .formkit-field {

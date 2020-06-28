@@ -13,13 +13,14 @@ function ClareInline({
   emailLabel,
   newTab,
   formId,
+  stacked,
 }) {
   return (
     <form action={action} method="post" target={newTab ? '_blank' : '_self'} className="seva-form formkit-form" method="post" data-sv-form={formId} data-format="inline" data-version={options.version} data-uid={options.uid} data-options={JSON.stringify(options)} min-width="400 500 600 700 800">
       <div data-style="clean">
         <ul className="formkit-alert formkit-alert-error" data-element="errors" data-group="alert">
         </ul>
-        <div data-element="fields" data-stacked="false" className="seva-fields formkit-fields">
+        <div data-element="fields" data-stacked={stacked} className="seva-fields formkit-fields">
           {!hideName && (
             <>
               {showLabels ? <label htmlFor="ck-first-form">{nameLabel}</label> : null}

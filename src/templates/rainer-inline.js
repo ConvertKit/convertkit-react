@@ -15,6 +15,7 @@ function RainerInline({
   emailLabel,
   newTab,
   formId,
+  stacked,
 }) {
   return (
     <form action={action} className="seva-form formkit-form" method="post" target={newTab ? '_blank' : '_self'} data-sv-form={formId} data-uid={options.uid} data-format="inline" data-version={options.version} data-options={options} min-width="400 500 600 700 800">
@@ -32,20 +33,20 @@ function RainerInline({
         </div>
         <div>
           <ul className="formkit-alert formkit-alert-error" data-element="errors" data-group="alert"></ul>
-          <div data-element="fields" data-stacked="true" className="seva-fields formkit-fields">
+          <div data-element="fields" data-stacked={stacked} className="seva-fields formkit-fields">
             {!hideName && (
               <>
                 {showLabels ? <label htmlFor="ck-first-form">{nameLabel}</label> : null}
                 <div className="formkit-field">
-                  <input className="formkit-input" aria-label={nameLabel} name="fields[first_name]" placeholder={namePlaceholder} type="text" style={{ color: 'rgb(0, 0, 0)', borderColor: 'rgb(227, 227, 227)', borderRadius: '4px', fontWeight: 400 }} id="ck-first-name" />
+                  <input className="formkit-input" aria-label={nameLabel} name="fields[first_name]" placeholder={namePlaceholder} type="text" style={{ color: 'rgb(146, 146, 146)', borderColor: 'rgb(228, 231, 234)', borderRadius: 0, fontWeight: 400 }} id="ck-first-name" />
                 </div>
               </>
             )}
             {showLabels ? <label htmlFor="ck-email">{emailLabel}</label> : null}
             <div className="formkit-field">
-              <input className="formkit-input" aria-label={emailLabel} name="email_address" placeholder={emailPlaceholder} required type="email" style={{ color: 'rgb(0, 0, 0)', borderColor: 'rgb(227, 227, 227)', borderRadius: '4px', fontWeight: 400 }} id="ck-email" />
+              <input className="formkit-input" aria-label={emailLabel} name="email_address" placeholder={emailPlaceholder} required type="email" style={{ color: 'rgb(146, 146, 146)', borderColor: 'rgb(228, 231, 234)', borderRadius: 0, fontWeight: 400 }} id="ck-email" />
             </div>
-            <button data-element="submit" className="formkit-submit formkit-submit" style={{ color: 'rgb(255, 255, 255)', backgroundColor: 'rgb(22, 119, 190)', borderRadius: '4px', fontWeight: 400 }}>
+            <button data-element="submit" className="formkit-submit formkit-submit" style={{ color: 'rgb(255, 255, 255)', backgroundColor: 'rgb(199, 92, 86)', borderRadius: 0, fontWeight: 700 }}>
               <div className="formkit-spinner">
                 <div></div>
                 <div></div>
