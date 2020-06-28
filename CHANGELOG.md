@@ -1,5 +1,9 @@
 # Convertkit React Changelog
 
+### [v1.2.1](https://github.com/ConvertKit/convertkit-react/releases/tag/v1.2.1)
+
+- Ensure formId is being passed to templates
+
 ### [v1.2.0](https://github.com/ConvertKit/convertkit-react/releases/tag/v1.2.0)
 
 - Enable input stacking customization

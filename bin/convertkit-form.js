@@ -1919,7 +1919,8 @@ var ConvertKitForm = function ConvertKitForm(_ref) {
 
   var action = "https://app.convertkit.com/forms/".concat(formId, "/subscriptions");
   return formFormat(format, _objectSpread2({
-    action: action
+    action: action,
+    formId: formId
   }, props))();
 };
 

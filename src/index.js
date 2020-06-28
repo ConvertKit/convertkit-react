@@ -22,7 +22,7 @@ const formFormat = (format, props) => {
 
 const ConvertKitForm = ({ format, formId, ...props }) => {
   const action = `https://app.convertkit.com/forms/${formId}/subscriptions`
-  return formFormat(format, { action, ...props })()
+  return formFormat(format, { action, formId, ...props })()
 }
 
 ConvertKitForm.propTypes = {
