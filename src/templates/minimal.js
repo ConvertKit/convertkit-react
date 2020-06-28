@@ -1,6 +1,6 @@
 import React from 'react'
 
-const MinimalForm = ({
+function Minimal({
   action,
   submitText,
   emailPlaceholder,
@@ -11,7 +11,8 @@ const MinimalForm = ({
   emailLabel,
   newTab,
   formId
-}) => (
+}) {
+  return (
     <form action={action} method="post" target={newTab ? '_blank' : '_self'} data-sv-form={formId}>
       {!hideName && (
         <>
@@ -24,5 +25,6 @@ const MinimalForm = ({
       <button type="submit">{submitText}</button>
     </form>
   )
+}
 
-export default MinimalForm
+export default Minimal

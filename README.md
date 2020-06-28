@@ -42,7 +42,7 @@ Here you'll pick out your form id from the form action in the embed code:
 function HomePage() {
   const config = {
     formId: MY_FORM_ID,
-    format: 'inline',
+    template: 'rainer',
     emailPlaceholder: 'Enter an email address',
     submitText: 'Sign up',
   }
@@ -57,8 +57,8 @@ function HomePage() {
 
 |   **property**  |   **default option**  |   **options**   |
 | :-------------: | :--------------: | :------------------: |
-|   format   |   minimal   | minimal, inline, slidein, sticky |
-|     template    |      clare       | _templates in the app_ |
+|   format   |   inline   | inline, modal, slidein, sticky |
+|     template    |    minimal       | _templates in the app + minimal_ |
 |    submitText   |     Subscribe    |     any string       |
 | emailPlaceholder |    Your email   |     any string       |
 | namePlaceholder |  Your first name |     any string       |
@@ -67,6 +67,11 @@ function HomePage() {
 |    showLabels   |       false      |     boolean          |
 |     hideName    |       false      |     boolean          |
 |     newTab      |       false      |     boolean          |
+
+##### Templates
+The minimal template has no preconfigured styling, leaving you options to style
+as desired. To get a preconfigured style, use one of the app templates
+(clare, rainer, powell etc) as seen on the app.
 
 
 ## Contributing

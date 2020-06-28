@@ -1,6 +1,7 @@
 import ClareInline from './templates/clare-inline'
 import MillsInline from './templates/mills-inline'
 import RainerInline from './templates/rainer-inline'
+import Minimal from './templates/minimal'
 
 const options = {
   settings: {
@@ -59,6 +60,7 @@ const renderTemplate = template => {
     clare: ClareInline,
     mills: MillsInline,
     rainer: RainerInline,
+    minimal: Minimal,
   }
 
   if (!allTemplates.hasOwnProperty(template)) {

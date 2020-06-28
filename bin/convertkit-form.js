@@ -1748,6 +1748,43 @@ function RainerInline(_ref) {
   }, "Powered By ConvertKit") : null)));
 }
 
+function Minimal(_ref) {
+  var action = _ref.action,
+      submitText = _ref.submitText,
+      emailPlaceholder = _ref.emailPlaceholder,
+      namePlaceholder = _ref.namePlaceholder,
+      hideName = _ref.hideName,
+      showLabels = _ref.showLabels,
+      nameLabel = _ref.nameLabel,
+      emailLabel = _ref.emailLabel,
+      newTab = _ref.newTab,
+      formId = _ref.formId;
+  return /*#__PURE__*/React.createElement("form", {
+    action: action,
+    method: "post",
+    target: newTab ? '_blank' : '_self',
+    "data-sv-form": formId
+  }, !hideName && /*#__PURE__*/React.createElement(React.Fragment, null, showLabels ? /*#__PURE__*/React.createElement("label", {
+    htmlFor: "ck-first-name"
+  }, nameLabel) : null, /*#__PURE__*/React.createElement("input", {
+    type: "text",
+    name: "fields[first_name]",
+    placeholder: namePlaceholder,
+    "aria-label": nameLabel,
+    id: "ck-first-name"
+  })), showLabels ? /*#__PURE__*/React.createElement("label", {
+    htmlFor: "ck-email"
+  }, emailLabel) : null, /*#__PURE__*/React.createElement("input", {
+    type: "email",
+    name: "email_address",
+    placeholder: emailPlaceholder,
+    "aria-label": emailLabel,
+    id: "ck-email"
+  }), /*#__PURE__*/React.createElement("button", {
+    type: "submit"
+  }, submitText));
+}
+
 var options = {
   settings: {
     after_subscribe: {
@@ -1804,7 +1841,8 @@ var renderTemplate = function renderTemplate(template) {
   var allTemplates = {
     clare: ClareInline,
     mills: MillsInline,
-    rainer: RainerInline
+    rainer: RainerInline,
+    minimal: Minimal
   };
 
   if (!allTemplates.hasOwnProperty(template)) {
@@ -1841,43 +1879,6 @@ function Form(_ref) {
 
 var InlineForm = Form;
 
-var MinimalForm = function MinimalForm(_ref) {
-  var action = _ref.action,
-      submitText = _ref.submitText,
-      emailPlaceholder = _ref.emailPlaceholder,
-      namePlaceholder = _ref.namePlaceholder,
-      hideName = _ref.hideName,
-      showLabels = _ref.showLabels,
-      nameLabel = _ref.nameLabel,
-      emailLabel = _ref.emailLabel,
-      newTab = _ref.newTab,
-      formId = _ref.formId;
-  return /*#__PURE__*/React.createElement("form", {
-    action: action,
-    method: "post",
-    target: newTab ? '_blank' : '_self',
-    "data-sv-form": formId
-  }, !hideName && /*#__PURE__*/React.createElement(React.Fragment, null, showLabels ? /*#__PURE__*/React.createElement("label", {
-    htmlFor: "ck-first-name"
-  }, nameLabel) : null, /*#__PURE__*/React.createElement("input", {
-    type: "text",
-    name: "fields[first_name]",
-    placeholder: namePlaceholder,
-    "aria-label": nameLabel,
-    id: "ck-first-name"
-  })), showLabels ? /*#__PURE__*/React.createElement("label", {
-    htmlFor: "ck-email"
-  }, emailLabel) : null, /*#__PURE__*/React.createElement("input", {
-    type: "email",
-    name: "email_address",
-    placeholder: emailPlaceholder,
-    "aria-label": emailLabel,
-    id: "ck-email"
-  }), /*#__PURE__*/React.createElement("button", {
-    type: "submit"
-  }, submitText));
-};
-
 var ModalForm = Form;
 
 var SlideInForm = Form;
@@ -1888,9 +1889,6 @@ var formFormat = function formFormat(format, props) {
   var formatEmbeds = {
     inline: function inline() {
       return /*#__PURE__*/React.createElement(InlineForm, props);
-    },
-    minimal: function minimal() {
-      return /*#__PURE__*/React.createElement(MinimalForm, props);
     },
     modal: function modal() {
       return /*#__PURE__*/React.createElement(ModalForm, props);
@@ -1936,8 +1934,8 @@ ConvertKitForm.propTypes = {
   newTab: propTypes.bool
 };
 ConvertKitForm.defaultProps = {
-  format: 'minimal',
-  template: 'clare',
+  format: 'inline',
+  template: 'minimal',
   submitText: 'Subscribe',
   emailPlaceholder: 'Your email',
   namePlaceholder: 'Your first name',

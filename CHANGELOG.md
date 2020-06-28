@@ -1,5 +1,9 @@
 # Convertkit React Changelog
 
+### [v1.1.0](https://github.com/ConvertKit/convertkit-react/releases/tag/v1.1.0)
+
+- Move minimal from being a format to being a template leaving 4 formats (inline, modal, sticky, slide-in)
+
 ### [v1.0.10](https://github.com/ConvertKit/convertkit-react/releases/tag/v1.0.10)
 
 - Make all formats compatible with templates by default

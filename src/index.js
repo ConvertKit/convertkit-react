@@ -1,7 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import InlineForm from './inline'
-import MinimalForm from './minimal'
 import ModalForm from './modal'
 import SlideInForm from './slidein'
 import StickyForm from './sticky'
@@ -9,7 +8,6 @@ import StickyForm from './sticky'
 const formFormat = (format, props) => {
   const formatEmbeds = {
     inline: () => <InlineForm {...props} />,
-    minimal: () => <MinimalForm {...props} />,
     modal: () => <ModalForm {...props} />,
     slidein: () => <SlideInForm {...props} />,
     sticky: () => <StickyForm {...props} />,
@@ -42,8 +40,8 @@ ConvertKitForm.propTypes = {
 }
 
 ConvertKitForm.defaultProps = {
-  format: 'minimal',
-  template: 'clare',
+  format: 'inline',
+  template: 'minimal',
   submitText: 'Subscribe',
   emailPlaceholder: 'Your email',
   namePlaceholder: 'Your first name',
