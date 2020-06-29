@@ -1,11 +1,14 @@
 # Convertkit React Changelog
 
+### [v1.3.1](https://github.com/ConvertKit/convertkit-react/releases/tag/v1.3.1)
+
+- Fix interfering charlotte style
+
 ### [v1.3.0](https://github.com/ConvertKit/convertkit-react/releases/tag/v1.3.0)
 
 - Add Powell and Charlotte inline templates
 - Modify build to inject only a single style tag
 - Fix conflicting styles across templates
-
 
 ### [v1.2.1](https://github.com/ConvertKit/convertkit-react/releases/tag/v1.2.1)
 
