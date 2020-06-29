@@ -478,7 +478,6 @@
 
 .formkit-form .formkit-header {
   margin: 0 0 27px 0;
-  text-align: center;
 }
 
 .formkit-form .formkit-subheader {
@@ -504,7 +503,7 @@
   text-align: center;
 }
 
-.formkit-form .formkit-fields {
+.formkit-form .formkit-fields[data-stacked="false"] {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;

@@ -18,12 +18,11 @@ function RainerInline({
   stacked,
 }) {
   return (
-    <form action={action} className="seva-form formkit-form" method="post" target={newTab ? '_blank' : '_self'} data-sv-form={formId} data-uid={options.uid} data-format="inline" data-version={options.version} data-options={options} min-width="400 500 600 700 800">
+    <form action={action} className="seva-form formkit-form" method="post" target={newTab ? '_blank' : '_self'} data-sv-form={formId} data-uid={options.uid} data-format="inline" data-version={options.version} data-options={JSON.stringify(options)} min-width="400 500 600 700 800">
       <div className="formkit-container" data-style="full" style={{ backgroundColor: 'rgb(255, 255, 255)' }}>
         <div className="formkit-hero">
-          <div className="formkit-hero-bg-color" style={{ backgroundColor: 'rgb(16, 16, 16)' }}></div>
-          <div className="formkit-hero-bg-img" style={{ backgroundImage: `url(${bgImage})`, opacity: 0.2, backgroundColor: 'rgb(16, 16, 16)' }}></div>
-          <div className="formkit-header" data-element="header" style={{ color: 'rgb(255, 255, 255)', fontSize: '27px', fontWeight: 700 }}>
+          <div className="formkit-hero-bg-color" style={{ background: `linear-gradient(rgba(16, 16, 16, .8), rgba(16, 16, 16, .8)), url(${bgImage})`, backgroundSize: 'cover', backgroundPosition: 'center' }}></div>
+          <div className="formkit-header" data-element="header" style={{ fontSize: '27px', fontWeight: 700, marginBottom: '20px', color: 'rgb(255,255,255)' }}>
             <h1>Join the Newsletter</h1>
             <p>​</p>
           </div>
@@ -46,7 +45,7 @@ function RainerInline({
             <div className="formkit-field">
               <input className="formkit-input" aria-label={emailLabel} name="email_address" placeholder={emailPlaceholder} required type="email" style={{ color: 'rgb(146, 146, 146)', borderColor: 'rgb(228, 231, 234)', borderRadius: 0, fontWeight: 400 }} id="ck-email" />
             </div>
-            <button data-element="submit" className="formkit-submit formkit-submit" style={{ color: 'rgb(255, 255, 255)', backgroundColor: 'rgb(199, 92, 86)', borderRadius: 0, fontWeight: 700 }}>
+            <button data-element="submit" className="formkit-submit formkit-submit" style={{ color: 'rgb(255, 255, 255)', backgroundColor: 'rgb(199, 92, 86)', borderRadius: 0, fontWeight: 700 }} type="submit">
               <div className="formkit-spinner">
                 <div></div>
                 <div></div>

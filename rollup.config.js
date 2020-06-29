@@ -12,7 +12,9 @@ export default {
   },
   plugins: [
     resolve(),
-    styles(),
+    styles({
+      mode: ['inject', { singleTag: true }]
+    }),
     commonjs({
       include: /node_modules/
     }),

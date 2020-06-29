@@ -398,7 +398,7 @@
 	width: 100%;
 }
 
-.formkit-form .formkit-fields {
+.formkit-form .formkit-fields[data-stacked="false"] {
 	display: -webkit-box;
 	display: -webkit-flex;
 	display: -ms-flexbox;
