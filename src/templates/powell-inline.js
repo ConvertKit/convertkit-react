@@ -1,7 +1,7 @@
 import React from 'react'
 import './powell-styles.css'
 
-const bgImage = 'https://pages.convertkit.com/assets/powell/bg.jpg'
+const bgImage = '//pages.convertkit.com/assets/powell/bg.jpg'
 
 function PowellInline({
   options,
@@ -38,7 +38,7 @@ function PowellInline({
             )}
             {showLabels ? <label htmlFor="ck-email">{emailLabel}</label> : null}
             <div className="formkit-field">
-              <input className="formkit-input" aria-label={emailLabel} name="email_address" placeholder={emailPlaceholder} required="" type="email" style={{ color: 'rgb(77, 77, 77)', borderColor: 'rgb(227, 227, 227)', borderRadius: '4px', fontWeight: 400 }} id="ck-email" />
+              <input className="formkit-input" aria-label={emailLabel} name="email_address" placeholder={emailPlaceholder} required type="email" style={{ color: 'rgb(77, 77, 77)', borderColor: 'rgb(227, 227, 227)', borderRadius: '4px', fontWeight: 400 }} id="ck-email" />
             </div>
             <button data-element="submit" className="formkit-submit formkit-submit" style={{ color: 'rgb(255, 255, 255)', backgroundColor: 'rgb(251, 105, 112)', borderRadius: '24px', fontWeight: 700 }}>
               <div className="formkit-spinner">

@@ -3,6 +3,7 @@ import ClareInline from './templates/clare-inline'
 import MillsInline from './templates/mills-inline'
 import RainerInline from './templates/rainer-inline'
 import PowellInline from './templates/powell-inline'
+import CharlotteInline from './templates/charlotte-inline'
 
 const options = {
   settings: {
@@ -63,6 +64,7 @@ const renderTemplate = template => {
     mills: MillsInline,
     rainer: RainerInline,
     powell: PowellInline,
+    charlotte: CharlotteInline,
   }
 
   if (!allTemplates.hasOwnProperty(template)) {

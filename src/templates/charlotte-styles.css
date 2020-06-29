@@ -330,8 +330,8 @@
   opacity: 0.3;
   border-radius: 100%;
   display: inline-block;
-  -webkit-animation: formkit-bouncedelay-formkit-form-data-uid-5c3a33ee02- 1.4s infinite ease-in-out both;
-  animation: formkit-bouncedelay-formkit-form-data-uid-5c3a33ee02- 1.4s infinite ease-in-out both;
+  -webkit-animation: formkit-bouncedelay-formkit-form-data-uid-bad0d82b83- 1.4s infinite ease-in-out both;
+  animation: formkit-bouncedelay-formkit-form-data-uid-bad0d82b83- 1.4s infinite ease-in-out both;
 }
 
 .formkit-form .formkit-spinner>div:nth-child(1) {
@@ -412,7 +412,7 @@
   opacity: 1;
 }
 
-@-webkit-keyframes formkit-bouncedelay-formkit-form-data-uid-5c3a33ee02- {
+@-webkit-keyframes formkit-bouncedelay-formkit-form-data-uid-bad0d82b83- {
 
   0%,
   80%,
@@ -429,7 +429,7 @@
   }
 }
 
-@keyframes formkit-bouncedelay-formkit-form-data-uid-5c3a33ee02- {
+@keyframes formkit-bouncedelay-formkit-form-data-uid-bad0d82b83- {
 
   0%,
   80%,
@@ -452,98 +452,71 @@
   border-left: 5px solid #e1e1e1;
 }
 
-.formkit-form {
-  border: 1px solid #e3e3e3;
-  max-width: 700px;
-  position: relative;
+.formkit-form.charlotte {
+  box-shadow: 0 0px 2px rgba(0, 0, 0, 0.15);
+  max-width: 700px !important;
   overflow: hidden;
 }
 
-.formkit-form .formkit-background {
+.formkit-form.charlotte [data-style="full"] {
   width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  background-size: cover;
-  background-position: center;
-  opacity: 0.3;
+  display: block;
 }
 
-.formkit-form [data-style="minimal"] {
+.formkit-form.charlotte .formkit-background {
+  position: relative !important;
+  background-position: center center;
+  background-size: cover;
+  min-height: 200px;
+  width: auto;
+  opacity: 1 !important;
+}
+
+.formkit-form .formkit-column {
   padding: 20px;
-  width: 100%;
   position: relative;
 }
 
 .formkit-form .formkit-header {
-  margin: 0 0 27px 0;
+  margin-top: 0;
+  margin-bottom: 20px;
 }
 
-.formkit-form .formkit-subheader {
-  margin: 18px 0;
-  text-align: center;
+.formkit-form .formkit-field {
+  margin: 0 0 10px 0;
 }
 
-.formkit-form .formkit-guarantee {
-  font-size: 13px;
-  margin: 10px 0 15px 0;
-  text-align: center;
+.formkit-form .formkit-fields .formkit-submit {
+  margin-top: 15px;
+  width: 100%;
 }
 
-.formkit-form .formkit-guarantee>p {
+.formkit-form .formkit-disclaimer {
+  margin: 0 0 15px 0;
+}
+
+.formkit-form .formkit-disclaimer>p {
   margin: 0;
 }
 
 .formkit-form .formkit-powered-by {
   color: #7d7d7d;
   display: block;
-  font-size: 12px;
-  margin: 10px 0 0 0;
+  font-size: 11px;
+  margin-bottom: 0;
+  margin-top: 20px;
   text-align: center;
 }
 
-.formkit-form .formkit-fields[data-stacked="false"] {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  margin: 25px auto 0 auto;
+.formkit-form[min-width~="600"].charlotte [data-style="full"],
+.formkit-form[min-width~="700"].charlotte [data-style="full"],
+.formkit-form[min-width~="800"].charlotte [data-style="full"] {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 }
 
-.formkit-form .formkit-field,
-.formkit-form .formkit-submit {
-  margin: 0 0 15px 0;
-  -webkit-flex: 1 0 100%;
-  -ms-flex: 1 0 100%;
-  flex: 1 0 100%;
-}
-
-.formkit-form[min-width~="600"] [data-style="minimal"] {
+.formkit-form[min-width~="600"] .formkit-column,
+.formkit-form[min-width~="700"] .formkit-column,
+.formkit-form[min-width~="800"] .formkit-column {
   padding: 40px;
-}
-
-.formkit-form[min-width~="600"] .formkit-fields[data-stacked="false"] {
-  margin-left: -5px;
-  margin-right: -5px;
-}
-
-.formkit-form[min-width~="600"] .formkit-fields[data-stacked="false"] .formkit-field,
-.formkit-form[min-width~="600"] .formkit-fields[data-stacked="false"] .formkit-submit {
-  margin: 0 5px 15px 5px;
-}
-
-.formkit-form[min-width~="600"] .formkit-fields[data-stacked="false"] .formkit-field {
-  -webkit-flex: 100 1 auto;
-  -ms-flex: 100 1 auto;
-  flex: 100 1 auto;
-}
-
-.formkit-form[min-width~="600"] .formkit-fields[data-stacked="false"] .formkit-submit {
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
 }

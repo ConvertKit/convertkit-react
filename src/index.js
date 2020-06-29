@@ -7,10 +7,10 @@ import StickyForm from './sticky'
 
 const formFormat = (format, props) => {
   const formatEmbeds = {
-    inline: () => <InlineForm {...props} />,
-    modal: () => <ModalForm {...props} />,
-    slidein: () => <SlideInForm {...props} />,
-    sticky: () => <StickyForm {...props} />,
+    inline: () => <InlineForm {...props} format={format} />,
+    modal: () => <ModalForm {...props} format={format} />,
+    slidein: () => <SlideInForm {...props} format={format} />,
+    sticky: () => <StickyForm {...props} format={format} />,
   }
   if (!formatEmbeds.hasOwnProperty(format)) {
     const errorMessage = `This form format: "${format}" is not supported`
