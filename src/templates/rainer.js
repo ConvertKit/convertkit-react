@@ -3,7 +3,7 @@ import './rainer-styles.css'
 
 const bgImage = '//pages.convertkit.com/assets/rainier/bg.jpg'
 
-function RainerInline({
+function Rainer({
   options,
   action,
   submitText,
@@ -15,10 +15,11 @@ function RainerInline({
   emailLabel,
   newTab,
   formId,
+  format,
   stacked,
 }) {
   return (
-    <form action={action} className="seva-form formkit-form" method="post" target={newTab ? '_blank' : '_self'} data-sv-form={formId} data-uid={options.uid} data-format="inline" data-version={options.version} data-options={JSON.stringify(options)} min-width="400 500 600 700 800">
+    <form action={action} className="seva-form formkit-form" method="post" target={newTab ? '_blank' : '_self'} data-sv-form={formId} data-uid={options.uid} data-format={format} data-version={options.version} data-options={JSON.stringify(options)} min-width="400 500 600 700 800">
       <div className="formkit-container" data-style="full" style={{ backgroundColor: 'rgb(255, 255, 255)' }}>
         <div className="formkit-hero">
           <div className="formkit-hero-bg-color" style={{ background: `linear-gradient(rgba(16, 16, 16, .8), rgba(16, 16, 16, .8)), url(${bgImage})`, backgroundSize: 'cover', backgroundPosition: 'center' }}></div>
@@ -63,4 +64,4 @@ function RainerInline({
   )
 }
 
-export default RainerInline
+export default Rainer

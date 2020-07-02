@@ -3,7 +3,7 @@ import './powell-styles.css'
 
 const bgImage = '//pages.convertkit.com/assets/powell/bg.jpg'
 
-function PowellInline({
+function Powell({
   options,
   action,
   submitText,
@@ -15,9 +15,10 @@ function PowellInline({
   emailLabel,
   newTab,
   formId,
+  format,
 }) {
   return (
-    <form action={action} className="seva-form formkit-form" method="post" target={newTab ? '_blank' : '_self'} data-sv-form={formId} data-uid={options.uid} data-format="inline" data-version={options.version} data-options={JSON.stringify(options)} min-width="400 500 600 700 800" style={{ backgroundColor: 'rgb(255, 255, 255)', borderRadius: '8px' }}>
+    <form action={action} className="seva-form formkit-form" method="post" target={newTab ? '_blank' : '_self'} data-sv-form={formId} data-uid={options.uid} data-format={format} data-version={options.version} data-options={JSON.stringify(options)} min-width="400 500 600 700 800" style={{ backgroundColor: 'rgb(255, 255, 255)', borderRadius: '8px' }}>
       <div data-style="card">
         <div data-element="column" className="formkit-column" style={{ background: `linear-gradient(rgba(251, 105, 112, .8), rgba(251, 105, 112, .8)), url(${bgImage})`, backgroundSize: 'cover', backgroundPosition: 'center', color: 'rgb(255, 255, 255)', fontSize: '22px', fontWeight: 700 }}>
           <div className="formkit-header" data-element="header">
@@ -59,4 +60,4 @@ function PowellInline({
   )
 }
 
-export default PowellInline
+export default Powell

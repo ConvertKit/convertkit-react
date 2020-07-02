@@ -1,28 +1,10 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import InlineForm from './inline'
-import ModalForm from './modal'
-import SlideInForm from './slidein'
-import StickyForm from './sticky'
+import Form from './form'
 
-const formFormat = (format, props) => {
-  const formatEmbeds = {
-    inline: () => <InlineForm {...props} format={format} />,
-    modal: () => <ModalForm {...props} format={format} />,
-    slidein: () => <SlideInForm {...props} format={format} />,
-    sticky: () => <StickyForm {...props} format={format} />,
-  }
-  if (!formatEmbeds.hasOwnProperty(format)) {
-    const errorMessage = `This form format: "${format}" is not supported`
-    throw new ReferenceError(errorMessage)
-  }
-
-  return formatEmbeds[format]
-}
-
-const ConvertKitForm = ({ format, formId, ...props }) => {
+const ConvertKitForm = ({ formId, ...props }) => {
   const action = `https://app.convertkit.com/forms/${formId}/subscriptions`
-  return formFormat(format, { action, formId, ...props })()
+  return <Form {...props} action={action} formId={formId} />
 }
 
 ConvertKitForm.propTypes = {

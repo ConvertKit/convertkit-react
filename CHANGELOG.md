@@ -1,5 +1,9 @@
 # Convertkit React Changelog
 
+### [v1.3.2](https://github.com/ConvertKit/convertkit-react/releases/tag/v1.3.2)
+
+- Refactor code to rid off individual format files
+
 ### [v1.3.1](https://github.com/ConvertKit/convertkit-react/releases/tag/v1.3.1)
 
 - Fix interfering charlotte style

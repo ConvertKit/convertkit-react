@@ -1,9 +1,9 @@
 import Minimal from './templates/minimal'
-import ClareInline from './templates/clare-inline'
-import MillsInline from './templates/mills-inline'
-import RainerInline from './templates/rainer-inline'
-import PowellInline from './templates/powell-inline'
-import CharlotteInline from './templates/charlotte-inline'
+import Clare from './templates/clare'
+import Mills from './templates/mills'
+import Rainer from './templates/rainer'
+import Powell from './templates/powell'
+import Charlotte from './templates/charlotte'
 
 const options = {
   settings: {
@@ -60,11 +60,11 @@ const options = {
 const renderTemplate = template => {
   const allTemplates = {
     minimal: Minimal,
-    clare: ClareInline,
-    mills: MillsInline,
-    rainer: RainerInline,
-    powell: PowellInline,
-    charlotte: CharlotteInline,
+    clare: Clare,
+    mills: Mills,
+    rainer: Rainer,
+    powell: Powell,
+    charlotte: Charlotte,
   }
 
   if (!allTemplates.hasOwnProperty(template)) {

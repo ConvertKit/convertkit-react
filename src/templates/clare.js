@@ -1,7 +1,7 @@
 import React from 'react'
 import './clare-styles.css'
 
-function ClareInline({
+function Clare({
   options,
   action,
   submitText,
@@ -13,10 +13,11 @@ function ClareInline({
   emailLabel,
   newTab,
   formId,
+  format,
   stacked,
 }) {
   return (
-    <form action={action} method="post" target={newTab ? '_blank' : '_self'} className="seva-form formkit-form" method="post" data-sv-form={formId} data-format="inline" data-version={options.version} data-uid={options.uid} data-options={JSON.stringify(options)} min-width="400 500 600 700 800">
+    <form action={action} method="post" target={newTab ? '_blank' : '_self'} className="seva-form formkit-form" method="post" data-sv-form={formId} data-format={format} data-version={options.version} data-uid={options.uid} data-options={JSON.stringify(options)} min-width="400 500 600 700 800">
       <div data-style="clean">
         <ul className="formkit-alert formkit-alert-error" data-element="errors" data-group="alert">
         </ul>
@@ -48,4 +49,4 @@ function ClareInline({
   )
 }
 
-export default ClareInline
+export default Clare

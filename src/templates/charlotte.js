@@ -3,7 +3,7 @@ import './charlotte-styles.css'
 
 const bgImage = '//pages.convertkit.com/assets/charlotte/bg.jpg'
 
-function CharlotteInline({
+function Charlotte({
   options,
   action,
   submitText,
@@ -58,4 +58,4 @@ function CharlotteInline({
   )
 }
 
-export default CharlotteInline
+export default Charlotte
