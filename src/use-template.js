@@ -4,6 +4,7 @@ import Mills from './templates/mills'
 import Rainer from './templates/rainer'
 import Powell from './templates/powell'
 import Charlotte from './templates/charlotte'
+import Pine from './templates/pine'
 
 const options = {
   settings: {
@@ -65,6 +66,7 @@ const renderTemplate = template => {
     rainer: Rainer,
     powell: Powell,
     charlotte: Charlotte,
+    pine: Pine,
   }
 
   if (!allTemplates.hasOwnProperty(template)) {

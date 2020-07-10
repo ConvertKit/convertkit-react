@@ -3,6 +3,7 @@
 ### [v1.4.0](https://github.com/ConvertKit/convertkit-react/releases/tag/v1.4.0)
 
 - Allow passing of class names to the form through ConvertKitForm component
+- Namespace template classes to avoid style conflicts
 - Show optional warnings for templates that do not support a format
 
 ### [v1.3.2](https://github.com/ConvertKit/convertkit-react/releases/tag/v1.3.2)
@@ -30,7 +31,7 @@
 
 ### [v1.1.0](https://github.com/ConvertKit/convertkit-react/releases/tag/v1.1.0)
 
-- Move minimal from being a format to being a template leaving 4 formats (inline, modal, sticky, slide-in)
+- Move minimal from being a format to being a template leaving 4 formats (inline, modal, sticky, slidein)
 
 ### [v1.0.10](https://github.com/ConvertKit/convertkit-react/releases/tag/v1.0.10)
 
