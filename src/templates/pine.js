@@ -1,9 +1,9 @@
 import React from 'react'
-import './charlotte-styles.css'
+import './pine-styles.css'
 
 const bgImage = '//pages.convertkit.com/assets/charlotte/bg.jpg'
 
-function Charlotte({
+function Pine({
   options,
   className,
   action,
@@ -59,4 +59,4 @@ function Charlotte({
   )
 }
 
-export default Charlotte
+export default Pine

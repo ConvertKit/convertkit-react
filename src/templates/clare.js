@@ -3,6 +3,7 @@ import './clare-styles.css'
 
 function Clare({
   options,
+  className,
   action,
   submitText,
   emailPlaceholder,
@@ -17,7 +18,7 @@ function Clare({
   stacked,
 }) {
   return (
-    <form action={action} method="post" target={newTab ? '_blank' : '_self'} className="seva-form formkit-form" method="post" data-sv-form={formId} data-format={format} data-version={options.version} data-uid={options.uid} data-options={JSON.stringify(options)} min-width="400 500 600 700 800">
+    <form action={action} method="post" target={newTab ? '_blank' : '_self'} className={`seva-form formkit-form clare ${className}`} method="post" data-sv-form={formId} data-format={format} data-version={options.version} data-uid={options.uid} data-options={JSON.stringify(options)} min-width="400 500 600 700 800">
       <div data-style="clean">
         <ul className="formkit-alert formkit-alert-error" data-element="errors" data-group="alert">
         </ul>

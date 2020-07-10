@@ -3,6 +3,7 @@ import './mills-styles.css'
 
 function Mills({
   options,
+  className,
   action,
   submitText,
   emailPlaceholder,
@@ -17,7 +18,7 @@ function Mills({
   stacked,
 }) {
   return (
-    <form action={action} className="seva-form formkit-form" method="post" target={newTab ? '_blank' : '_self'} data-sv-form={formId} data-uid={options.uid} data-format={format} data-version={options.version} data-options={JSON.stringify(options)} min-width="400 500 600 700 800" style={{ backgroundColor: 'rgb(249, 250, 251)', borderRadius: '4px' }}>
+    <form action={action} className={`seva-form formkit-form mills ${className}`} method="post" target={newTab ? '_blank' : '_self'} data-sv-form={formId} data-uid={options.uid} data-format={format} data-version={options.version} data-options={JSON.stringify(options)} min-width="400 500 600 700 800" style={{ backgroundColor: 'rgb(249, 250, 251)', borderRadius: '4px' }}>
       <div className="formkit-background" style={{ opacity: 0.2 }}></div>
       <div data-style="minimal">
         <div className="formkit-header" data-element="header" style={{ color: 'rgb(77, 77, 77)', fontSize: '27px', fontWeight: 700, textAlign: 'center' }}>

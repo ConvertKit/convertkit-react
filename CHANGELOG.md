@@ -1,16 +1,21 @@
 # Convertkit React Changelog
 
+### [v1.4.0](https://github.com/ConvertKit/convertkit-react/releases/tag/v1.4.0)
+
+- Allow passing of class names to the form through ConvertKitForm component
+- Show optional warnings for templates that do not support a format
+
 ### [v1.3.2](https://github.com/ConvertKit/convertkit-react/releases/tag/v1.3.2)
 
 - Refactor code to rid off individual format files
 
 ### [v1.3.1](https://github.com/ConvertKit/convertkit-react/releases/tag/v1.3.1)
 
-- Fix interfering charlotte style
+- Fix interfering .formkit-form.charlotte style
 
 ### [v1.3.0](https://github.com/ConvertKit/convertkit-react/releases/tag/v1.3.0)
 
-- Add Powell and Charlotte inline templates
+- Add Powell and .formkit-form.charlotte inline templates
 - Modify build to inject only a single style tag
 - Fix conflicting styles across templates
 

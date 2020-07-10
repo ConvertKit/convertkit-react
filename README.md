@@ -10,6 +10,10 @@
 yarn add convertkit-react
 ```
 
+## Demos
+
+View examples on [how to use different templates here](https://codesandbox.io/s/twilight-cookies-ihryz) and [how to style your form with custom styling here](https://codesandbox.io/s/nifty-fog-f8eys)
+
 ## Usage
 
 ```jsx
@@ -68,6 +72,7 @@ function HomePage() {
 |     hideName    |       false      |     boolean          |
 |     newTab      |       false      |     boolean          |
 |      stack      |        true      |     boolean          |
+|   hideWarnings  |       false      |     boolean          |
 
 ##### Templates
 The minimal template has no preconfigured styling, leaving you options to style
