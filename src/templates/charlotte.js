@@ -1,6 +1,6 @@
 import React from 'react'
-import Warning from '../warning'
 import './charlotte-styles.css'
+import Warning from '../warning'
 
 const ALLOWED_FORMATS = ['inline', 'modal', 'slide in']
 
