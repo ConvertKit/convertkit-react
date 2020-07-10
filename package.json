@@ -1,6 +1,6 @@
 {
   "name": "convertkit-react",
-  "version": "1.3.2",
+  "version": "1.4.0",
   "description": "React library to add convertkit forms to React applications",
   "main": "bin/convertkit-form.js",
   "scripts": {

@@ -25,7 +25,7 @@ function Charlotte({
   return (
     <>
       {!hideWarnings && !ALLOWED_FORMATS.includes(format) ? <Warning message="This template is not available for the chosen format" /> : null}
-      <form action={action} className={`seva-form formkit-form charlotte ${className}`} method="post" target={newTab ? '_blank' : '_self'} data-sv-form={formId} data-uid={options.uid} data-format={format} data-version="5" data-options={JSON.stringify(options)} min-width="400 500 600 700 800" style={{ backgroundColor: 'rgb(255, 255, 255)', borderRadius: '6px' }}>
+      <form action={action} className={`seva-form formkit-form charlotte ${className}`} method="post" target={newTab ? '_blank' : '_self'} data-sv-form={formId} data-uid={options.uid} data-format={format} data-version={options.version} data-options={JSON.stringify(options)} min-width="400 500 600 700 800" style={{ backgroundColor: 'rgb(255, 255, 255)', borderRadius: '6px' }}>
         <div data-style="full">
           <div data-element="column" className="formkit-background" style={{ backgroundImage: `url(${bgImage})` }}></div>
           <div data-element="column" className="formkit-column">

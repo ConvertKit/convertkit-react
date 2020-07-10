@@ -5,6 +5,7 @@
 - Allow passing of class names to the form through ConvertKitForm component
 - Namespace template classes to avoid style conflicts
 - Show optional warnings for templates that do not support a format
+- Add pine template
 
 ### [v1.3.2](https://github.com/ConvertKit/convertkit-react/releases/tag/v1.3.2)
 
