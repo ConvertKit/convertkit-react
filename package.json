@@ -5,7 +5,7 @@
   "main": "bin/convertkit-form.js",
   "scripts": {
     "build": "rollup -c",
-    "test": "jest"
+    "test": "jest --coverage"
   },
   "repository": {
     "type": "git",
