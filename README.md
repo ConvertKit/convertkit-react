@@ -59,29 +59,25 @@ function HomePage() {
 
 #### Configuration Options
 
-|   **property**  |   **default option**  |   **options**   |
-| :-------------: | :--------------: | :------------------: |
-|   format   |   inline   | inline, modal, slidein, sticky |
-|     template    |    minimal       | _templates in the app + minimal_ |
-|    submitText   |     Subscribe    |     any string       |
-| emailPlaceholder |    Your email   |     any string       |
-| namePlaceholder |  Your first name |     any string       |
-|    nameLabel    |     First name   |     any string       |
-|    emailLabel   |       Email      |     any string       |
-|    showLabels   |       false      |     boolean          |
-|     hideName    |       false      |     boolean          |
-|     newTab      |       false      |     boolean          |
-|      stack      |        true      |     boolean          |
-|   hideWarnings  |       false      |     boolean          |
+|   **Property**   |   **Type**   |  **Default option**  |    **Description**   |
+| :--------------: | :----------: | :------------------: | :------------------: |
+|     format       |   `string`   |        inline        | inline, modal, slidein, sticky   |
+|     template     |   `string`   |       minimal        | _Templates in the app + minimal_ |
+|    submitText    |   `string`   |      Subscribe       | Text shown in submit button      |
+| emailPlaceholder |   `string`   |      Your email      | Placeholder for email input      |
+| namePlaceholder  |   `string`   |   Your first name    | Placeholder for first name input |
+|    nameLabel     |   `string`   |      First name      | Custom name label                |
+|    emailLabel    |   `string`   |         Email        | Custom email label               |
+|    showLabels    |  `boolean`   |         false        | Shows labels with form inputs or only rely on `aria-label`   |
+|     hideName     |  `boolean`   |         false        | Hides the name input field       |
+|     newTab       |  `boolean`   |         false        | Determines if form should be processed in new tab or current |
+|      stack       |  `boolean`   |         true         | Determines if inputs are stacked or placed inline            |
+|   hideWarnings   |  `boolean`   |         false        | Hide warnings that are shown due to misconfiguration         |
 
 ##### Templates
 The minimal template has no preconfigured styling, leaving you options to style
 as desired. To get a preconfigured style, use one of the app templates
 (clare, rainer, powell etc) as seen on the app.
-
-##### Stacking
-Using the stack option determines if the form inputs will be stacked upon each
-other or placed inline. All templates use stacked inputs by default.
 
 
 ## Contributing
