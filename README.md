@@ -59,7 +59,7 @@ function HomePage() {
 
 #### Configuration Options
 
-|   **Property**   |   **Type**   |  **Default option**  |    **Description**   |
+|   **Property**   |   **Type**   |      **Default**     |    **Description**   |
 | ---------------- | ------------ | -------------------- | -------------------- |
 |     format       |   `String`   |        inline        | inline, modal, slidein, sticky   |
 |     template     |   `String`   |       minimal        | _Templates in the app + minimal_ |
