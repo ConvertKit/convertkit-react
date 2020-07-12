@@ -60,19 +60,19 @@ function HomePage() {
 #### Configuration Options
 
 |   **Property**   |   **Type**   |  **Default option**  |    **Description**   |
-| :--------------: | :----------: | :------------------: | :------------------: |
-|     format       |   `string`   |        inline        | inline, modal, slidein, sticky   |
-|     template     |   `string`   |       minimal        | _Templates in the app + minimal_ |
-|    submitText    |   `string`   |      Subscribe       | Text shown in submit button      |
-| emailPlaceholder |   `string`   |      Your email      | Placeholder for email input      |
-| namePlaceholder  |   `string`   |   Your first name    | Placeholder for first name input |
-|    nameLabel     |   `string`   |      First name      | Custom name label                |
-|    emailLabel    |   `string`   |         Email        | Custom email label               |
-|    showLabels    |  `boolean`   |         false        | Shows labels with form inputs or only rely on `aria-label`   |
-|     hideName     |  `boolean`   |         false        | Hides the name input field       |
-|     newTab       |  `boolean`   |         false        | Determines if form should be processed in new tab or current |
-|      stack       |  `boolean`   |         true         | Determines if inputs are stacked or placed inline            |
-|   hideWarnings   |  `boolean`   |         false        | Hide warnings that are shown due to misconfiguration         |
+| ---------------- | ------------ | -------------------- | -------------------- |
+|     format       |   `String`   |        inline        | inline, modal, slidein, sticky   |
+|     template     |   `String`   |       minimal        | _Templates in the app + minimal_ |
+|    submitText    |   `String`   |      Subscribe       | Text shown in submit button      |
+| emailPlaceholder |   `String`   |      Your email      | Placeholder for email input      |
+| namePlaceholder  |   `String`   |   Your first name    | Placeholder for first name input |
+|    nameLabel     |   `String`   |      First name      | Custom name label                |
+|    emailLabel    |   `String`   |         Email        | Custom email label               |
+|    showLabels    |  `Boolean`   |        `false`       | Shows labels with form inputs or only rely on `aria-label`   |
+|     hideName     |  `Boolean`   |        `false`       | Hides the name input field       |
+|     newTab       |  `Boolean`   |        `false`       | Determines if form should be processed in new tab or current |
+|      stack       |  `Boolean`   |        `true`        | Determines if inputs are stacked or placed inline            |
+|   hideWarnings   |  `Boolean`   |        `false`       | Hide warnings that are shown due to misconfiguration         |
 
 ##### Templates
 The minimal template has no preconfigured styling, leaving you options to style
