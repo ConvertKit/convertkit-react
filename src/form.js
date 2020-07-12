@@ -2,7 +2,7 @@ import React from 'react'
 import useTemplate from './use-template'
 
 // TO-DO:
-// derive data-uid of user and use to prefix CSS classes
+// derive data-uid of user
 
 function useAppFormat(format) {
   switch (format) {

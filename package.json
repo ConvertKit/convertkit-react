@@ -4,7 +4,8 @@
   "description": "React library to add convertkit forms to React applications",
   "main": "bin/convertkit-form.js",
   "scripts": {
-    "build": "rollup -c"
+    "build": "rollup -c",
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -23,10 +24,16 @@
   "devDependencies": {
     "@babel/cli": "^7.10.3",
     "@babel/core": "^7.10.3",
-    "@babel/preset-env": "^7.10.3",
-    "@babel/preset-react": "^7.10.1",
+    "@babel/preset-env": "^7.10.4",
+    "@babel/preset-react": "^7.10.4",
     "@rollup/plugin-babel": "^5.0.4",
     "@rollup/plugin-node-resolve": "^8.1.0",
+    "@testing-library/jest-dom": "^5.11.0",
+    "@testing-library/react": "^10.4.5",
+    "babel-jest": "^26.1.0",
+    "jest": "^26.1.0",
+    "react-dom": "^16.13.1",
+    "react-test-renderer": "^16.13.1",
     "rollup-plugin-commonjs": "^10.1.0",
     "rollup-plugin-styles": "^3.9.0"
   }

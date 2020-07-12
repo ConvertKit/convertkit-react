@@ -1,5 +1,21 @@
 import React from 'react';
 
+function _typeof(obj) {
+  "@babel/helpers - typeof";
+
+  if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") {
+    _typeof = function (obj) {
+      return typeof obj;
+    };
+  } else {
+    _typeof = function (obj) {
+      return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj;
+    };
+  }
+
+  return _typeof(obj);
+}
+
 function _defineProperty(obj, key, value) {
   if (key in obj) {
     Object.defineProperty(obj, key, {
@@ -81,29 +97,28 @@ function createCommonjsModule(fn, module) {
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
  */
-
-var b = "function" === typeof Symbol && Symbol.for,
-    c = b ? Symbol.for("react.element") : 60103,
-    d = b ? Symbol.for("react.portal") : 60106,
-    e = b ? Symbol.for("react.fragment") : 60107,
-    f = b ? Symbol.for("react.strict_mode") : 60108,
-    g = b ? Symbol.for("react.profiler") : 60114,
-    h = b ? Symbol.for("react.provider") : 60109,
-    k = b ? Symbol.for("react.context") : 60110,
-    l = b ? Symbol.for("react.async_mode") : 60111,
-    m = b ? Symbol.for("react.concurrent_mode") : 60111,
-    n = b ? Symbol.for("react.forward_ref") : 60112,
-    p = b ? Symbol.for("react.suspense") : 60113,
-    q = b ? Symbol.for("react.suspense_list") : 60120,
-    r = b ? Symbol.for("react.memo") : 60115,
-    t = b ? Symbol.for("react.lazy") : 60116,
-    v = b ? Symbol.for("react.block") : 60121,
-    w = b ? Symbol.for("react.fundamental") : 60117,
-    x = b ? Symbol.for("react.responder") : 60118,
-    y = b ? Symbol.for("react.scope") : 60119;
+var b = "function" === typeof Symbol && Symbol["for"],
+    c = b ? Symbol["for"]("react.element") : 60103,
+    d = b ? Symbol["for"]("react.portal") : 60106,
+    e = b ? Symbol["for"]("react.fragment") : 60107,
+    f = b ? Symbol["for"]("react.strict_mode") : 60108,
+    g = b ? Symbol["for"]("react.profiler") : 60114,
+    h = b ? Symbol["for"]("react.provider") : 60109,
+    k = b ? Symbol["for"]("react.context") : 60110,
+    l = b ? Symbol["for"]("react.async_mode") : 60111,
+    m = b ? Symbol["for"]("react.concurrent_mode") : 60111,
+    n = b ? Symbol["for"]("react.forward_ref") : 60112,
+    p = b ? Symbol["for"]("react.suspense") : 60113,
+    q = b ? Symbol["for"]("react.suspense_list") : 60120,
+    r = b ? Symbol["for"]("react.memo") : 60115,
+    t = b ? Symbol["for"]("react.lazy") : 60116,
+    v = b ? Symbol["for"]("react.block") : 60121,
+    w = b ? Symbol["for"]("react.fundamental") : 60117,
+    x = b ? Symbol["for"]("react.responder") : 60118,
+    y = b ? Symbol["for"]("react.scope") : 60119;
 
 function z(a) {
-  if ("object" === typeof a && null !== a) {
+  if ("object" === _typeof(a) && null !== a) {
     var u = a.$$typeof;
 
     switch (u) {
@@ -156,58 +171,58 @@ var Profiler = g;
 var StrictMode = f;
 var Suspense = p;
 
-var isAsyncMode = function (a) {
+var isAsyncMode = function isAsyncMode(a) {
   return A(a) || z(a) === l;
 };
 
 var isConcurrentMode = A;
 
-var isContextConsumer = function (a) {
+var isContextConsumer = function isContextConsumer(a) {
   return z(a) === k;
 };
 
-var isContextProvider = function (a) {
+var isContextProvider = function isContextProvider(a) {
   return z(a) === h;
 };
 
-var isElement = function (a) {
-  return "object" === typeof a && null !== a && a.$$typeof === c;
+var isElement = function isElement(a) {
+  return "object" === _typeof(a) && null !== a && a.$$typeof === c;
 };
 
-var isForwardRef = function (a) {
+var isForwardRef = function isForwardRef(a) {
   return z(a) === n;
 };
 
-var isFragment = function (a) {
+var isFragment = function isFragment(a) {
   return z(a) === e;
 };
 
-var isLazy = function (a) {
+var isLazy = function isLazy(a) {
   return z(a) === t;
 };
 
-var isMemo = function (a) {
+var isMemo = function isMemo(a) {
   return z(a) === r;
 };
 
-var isPortal = function (a) {
+var isPortal = function isPortal(a) {
   return z(a) === d;
 };
 
-var isProfiler = function (a) {
+var isProfiler = function isProfiler(a) {
   return z(a) === g;
 };
 
-var isStrictMode = function (a) {
+var isStrictMode = function isStrictMode(a) {
   return z(a) === f;
 };
 
-var isSuspense = function (a) {
+var isSuspense = function isSuspense(a) {
   return z(a) === p;
 };
 
-var isValidElementType = function (a) {
-  return "string" === typeof a || "function" === typeof a || a === e || a === m || a === g || a === f || a === p || a === q || "object" === typeof a && null !== a && (a.$$typeof === t || a.$$typeof === r || a.$$typeof === h || a.$$typeof === k || a.$$typeof === n || a.$$typeof === w || a.$$typeof === x || a.$$typeof === y || a.$$typeof === v);
+var isValidElementType = function isValidElementType(a) {
+  return "string" === typeof a || "function" === typeof a || a === e || a === m || a === g || a === f || a === p || a === q || "object" === _typeof(a) && null !== a && (a.$$typeof === t || a.$$typeof === r || a.$$typeof === h || a.$$typeof === k || a.$$typeof === n || a.$$typeof === w || a.$$typeof === x || a.$$typeof === y || a.$$typeof === v);
 };
 
 var typeOf = z;
@@ -248,35 +263,35 @@ var reactIs_development = createCommonjsModule(function (module, exports) {
     (function () {
       // nor polyfill, then a plain number is used for performance.
 
-      var hasSymbol = typeof Symbol === 'function' && Symbol.for;
-      var REACT_ELEMENT_TYPE = hasSymbol ? Symbol.for('react.element') : 0xeac7;
-      var REACT_PORTAL_TYPE = hasSymbol ? Symbol.for('react.portal') : 0xeaca;
-      var REACT_FRAGMENT_TYPE = hasSymbol ? Symbol.for('react.fragment') : 0xeacb;
-      var REACT_STRICT_MODE_TYPE = hasSymbol ? Symbol.for('react.strict_mode') : 0xeacc;
-      var REACT_PROFILER_TYPE = hasSymbol ? Symbol.for('react.profiler') : 0xead2;
-      var REACT_PROVIDER_TYPE = hasSymbol ? Symbol.for('react.provider') : 0xeacd;
-      var REACT_CONTEXT_TYPE = hasSymbol ? Symbol.for('react.context') : 0xeace; // TODO: We don't use AsyncMode or ConcurrentMode anymore. They were temporary
+      var hasSymbol = typeof Symbol === 'function' && Symbol["for"];
+      var REACT_ELEMENT_TYPE = hasSymbol ? Symbol["for"]('react.element') : 0xeac7;
+      var REACT_PORTAL_TYPE = hasSymbol ? Symbol["for"]('react.portal') : 0xeaca;
+      var REACT_FRAGMENT_TYPE = hasSymbol ? Symbol["for"]('react.fragment') : 0xeacb;
+      var REACT_STRICT_MODE_TYPE = hasSymbol ? Symbol["for"]('react.strict_mode') : 0xeacc;
+      var REACT_PROFILER_TYPE = hasSymbol ? Symbol["for"]('react.profiler') : 0xead2;
+      var REACT_PROVIDER_TYPE = hasSymbol ? Symbol["for"]('react.provider') : 0xeacd;
+      var REACT_CONTEXT_TYPE = hasSymbol ? Symbol["for"]('react.context') : 0xeace; // TODO: We don't use AsyncMode or ConcurrentMode anymore. They were temporary
       // (unstable) APIs that have been removed. Can we remove the symbols?
 
-      var REACT_ASYNC_MODE_TYPE = hasSymbol ? Symbol.for('react.async_mode') : 0xeacf;
-      var REACT_CONCURRENT_MODE_TYPE = hasSymbol ? Symbol.for('react.concurrent_mode') : 0xeacf;
-      var REACT_FORWARD_REF_TYPE = hasSymbol ? Symbol.for('react.forward_ref') : 0xead0;
-      var REACT_SUSPENSE_TYPE = hasSymbol ? Symbol.for('react.suspense') : 0xead1;
-      var REACT_SUSPENSE_LIST_TYPE = hasSymbol ? Symbol.for('react.suspense_list') : 0xead8;
-      var REACT_MEMO_TYPE = hasSymbol ? Symbol.for('react.memo') : 0xead3;
-      var REACT_LAZY_TYPE = hasSymbol ? Symbol.for('react.lazy') : 0xead4;
-      var REACT_BLOCK_TYPE = hasSymbol ? Symbol.for('react.block') : 0xead9;
-      var REACT_FUNDAMENTAL_TYPE = hasSymbol ? Symbol.for('react.fundamental') : 0xead5;
-      var REACT_RESPONDER_TYPE = hasSymbol ? Symbol.for('react.responder') : 0xead6;
-      var REACT_SCOPE_TYPE = hasSymbol ? Symbol.for('react.scope') : 0xead7;
+      var REACT_ASYNC_MODE_TYPE = hasSymbol ? Symbol["for"]('react.async_mode') : 0xeacf;
+      var REACT_CONCURRENT_MODE_TYPE = hasSymbol ? Symbol["for"]('react.concurrent_mode') : 0xeacf;
+      var REACT_FORWARD_REF_TYPE = hasSymbol ? Symbol["for"]('react.forward_ref') : 0xead0;
+      var REACT_SUSPENSE_TYPE = hasSymbol ? Symbol["for"]('react.suspense') : 0xead1;
+      var REACT_SUSPENSE_LIST_TYPE = hasSymbol ? Symbol["for"]('react.suspense_list') : 0xead8;
+      var REACT_MEMO_TYPE = hasSymbol ? Symbol["for"]('react.memo') : 0xead3;
+      var REACT_LAZY_TYPE = hasSymbol ? Symbol["for"]('react.lazy') : 0xead4;
+      var REACT_BLOCK_TYPE = hasSymbol ? Symbol["for"]('react.block') : 0xead9;
+      var REACT_FUNDAMENTAL_TYPE = hasSymbol ? Symbol["for"]('react.fundamental') : 0xead5;
+      var REACT_RESPONDER_TYPE = hasSymbol ? Symbol["for"]('react.responder') : 0xead6;
+      var REACT_SCOPE_TYPE = hasSymbol ? Symbol["for"]('react.scope') : 0xead7;
 
       function isValidElementType(type) {
         return typeof type === 'string' || typeof type === 'function' || // Note: its typeof might be other than 'symbol' or 'number' if it's a polyfill.
-        type === REACT_FRAGMENT_TYPE || type === REACT_CONCURRENT_MODE_TYPE || type === REACT_PROFILER_TYPE || type === REACT_STRICT_MODE_TYPE || type === REACT_SUSPENSE_TYPE || type === REACT_SUSPENSE_LIST_TYPE || typeof type === 'object' && type !== null && (type.$$typeof === REACT_LAZY_TYPE || type.$$typeof === REACT_MEMO_TYPE || type.$$typeof === REACT_PROVIDER_TYPE || type.$$typeof === REACT_CONTEXT_TYPE || type.$$typeof === REACT_FORWARD_REF_TYPE || type.$$typeof === REACT_FUNDAMENTAL_TYPE || type.$$typeof === REACT_RESPONDER_TYPE || type.$$typeof === REACT_SCOPE_TYPE || type.$$typeof === REACT_BLOCK_TYPE);
+        type === REACT_FRAGMENT_TYPE || type === REACT_CONCURRENT_MODE_TYPE || type === REACT_PROFILER_TYPE || type === REACT_STRICT_MODE_TYPE || type === REACT_SUSPENSE_TYPE || type === REACT_SUSPENSE_LIST_TYPE || _typeof(type) === 'object' && type !== null && (type.$$typeof === REACT_LAZY_TYPE || type.$$typeof === REACT_MEMO_TYPE || type.$$typeof === REACT_PROVIDER_TYPE || type.$$typeof === REACT_CONTEXT_TYPE || type.$$typeof === REACT_FORWARD_REF_TYPE || type.$$typeof === REACT_FUNDAMENTAL_TYPE || type.$$typeof === REACT_RESPONDER_TYPE || type.$$typeof === REACT_SCOPE_TYPE || type.$$typeof === REACT_BLOCK_TYPE);
       }
 
       function typeOf(object) {
-        if (typeof object === 'object' && object !== null) {
+        if (_typeof(object) === 'object' && object !== null) {
           var $$typeof = object.$$typeof;
 
           switch ($$typeof) {
@@ -357,7 +372,7 @@ var reactIs_development = createCommonjsModule(function (module, exports) {
       }
 
       function isElement(object) {
-        return typeof object === 'object' && object !== null && object.$$typeof === REACT_ELEMENT_TYPE;
+        return _typeof(object) === 'object' && object !== null && object.$$typeof === REACT_ELEMENT_TYPE;
       }
 
       function isForwardRef(object) {
@@ -566,14 +581,14 @@ var objectAssign = shouldUseNative() ? Object.assign : function (target, source)
 var ReactPropTypesSecret = 'SECRET_DO_NOT_PASS_THIS_OR_YOU_WILL_BE_FIRED';
 var ReactPropTypesSecret_1 = ReactPropTypesSecret;
 
-var printWarning = function () {};
+var printWarning = function printWarning() {};
 
 if (process.env.NODE_ENV !== 'production') {
   var ReactPropTypesSecret$1 = ReactPropTypesSecret_1;
   var loggedTypeFailures = {};
   var has = Function.call.bind(Object.prototype.hasOwnProperty);
 
-  printWarning = function (text) {
+  printWarning = function printWarning(text) {
     var message = 'Warning: ' + text;
 
     if (typeof console !== 'undefined') {
@@ -613,7 +628,7 @@ function checkPropTypes(typeSpecs, values, location, componentName, getStack) {
           // This is intentionally an invariant that gets caught. It's the same
           // behavior as without this statement except with a better message.
           if (typeof typeSpecs[typeSpecName] !== 'function') {
-            var err = Error((componentName || 'React class') + ': ' + location + ' type `' + typeSpecName + '` is invalid; ' + 'it must be a function, usually from the `prop-types` package, but received `' + typeof typeSpecs[typeSpecName] + '`.');
+            var err = Error((componentName || 'React class') + ': ' + location + ' type `' + typeSpecName + '` is invalid; ' + 'it must be a function, usually from the `prop-types` package, but received `' + _typeof(typeSpecs[typeSpecName]) + '`.');
             err.name = 'Invariant Violation';
             throw err;
           }
@@ -624,7 +639,7 @@ function checkPropTypes(typeSpecs, values, location, componentName, getStack) {
         }
 
         if (error && !(error instanceof Error)) {
-          printWarning((componentName || 'React class') + ': type specification of ' + location + ' `' + typeSpecName + '` is invalid; the type checker ' + 'function must return `null` or an `Error` but returned a ' + typeof error + '. ' + 'You may have forgotten to pass an argument to the type checker ' + 'creator (arrayOf, instanceOf, objectOf, oneOf, oneOfType, and ' + 'shape all require an argument).');
+          printWarning((componentName || 'React class') + ': type specification of ' + location + ' `' + typeSpecName + '` is invalid; the type checker ' + 'function must return `null` or an `Error` but returned a ' + _typeof(error) + '. ' + 'You may have forgotten to pass an argument to the type checker ' + 'creator (arrayOf, instanceOf, objectOf, oneOf, oneOfType, and ' + 'shape all require an argument).');
         }
 
         if (error instanceof Error && !(error.message in loggedTypeFailures)) {
@@ -655,10 +670,10 @@ var checkPropTypes_1 = checkPropTypes;
 
 var has$1 = Function.call.bind(Object.prototype.hasOwnProperty);
 
-var printWarning$1 = function () {};
+var printWarning$1 = function printWarning() {};
 
 if (process.env.NODE_ENV !== 'production') {
-  printWarning$1 = function (text) {
+  printWarning$1 = function printWarning(text) {
     var message = 'Warning: ' + text;
 
     if (typeof console !== 'undefined') {
@@ -678,7 +693,7 @@ function emptyFunctionThatReturnsNull() {
   return null;
 }
 
-var factoryWithTypeCheckers = function (isValidElement, throwOnDirectAccess) {
+var factoryWithTypeCheckers = function factoryWithTypeCheckers(isValidElement, throwOnDirectAccess) {
   /* global Symbol */
   var ITERATOR_SYMBOL = typeof Symbol === 'function' && Symbol.iterator;
   var FAUX_ITERATOR_SYMBOL = '@@iterator'; // Before Symbol spec.
@@ -1127,7 +1142,7 @@ var factoryWithTypeCheckers = function (isValidElement, throwOnDirectAccess) {
   }
 
   function isNode(propValue) {
-    switch (typeof propValue) {
+    switch (_typeof(propValue)) {
       case 'number':
       case 'string':
       case 'undefined':
@@ -1206,7 +1221,7 @@ var factoryWithTypeCheckers = function (isValidElement, throwOnDirectAccess) {
 
 
   function getPropType(propValue) {
-    var propType = typeof propValue;
+    var propType = _typeof(propValue);
 
     if (Array.isArray(propValue)) {
       return 'array';
@@ -1287,7 +1302,7 @@ function emptyFunctionWithReset() {}
 
 emptyFunctionWithReset.resetWarningCache = emptyFunction;
 
-var factoryWithThrowingShims = function () {
+var factoryWithThrowingShims = function factoryWithThrowingShims() {
   function shim(props, propName, componentName, location, propFullName, secret) {
     if (secret === ReactPropTypesSecret_1) {
       // It is still safe when called from React.
@@ -1410,7 +1425,9 @@ function injector_bf1ba7e0 (n, r) {
 
   function o() {
     var e = document.createElement("style");
-    if (e.setAttribute("type", "text/css"), r.attributes) for (var t = Object.keys(r.attributes), n = 0; n < t.length; n++) e.setAttribute(t[n], r.attributes[t[n]]);
+    if (e.setAttribute("type", "text/css"), r.attributes) for (var t = Object.keys(r.attributes), n = 0; n < t.length; n++) {
+      e.setAttribute(t[n], r.attributes[t[n]]);
+    }
     var d = "prepend" === a ? "afterbegin" : "beforeend";
     return s.insertAdjacentElement(d, e), e;
   }
@@ -1422,6 +1439,7 @@ injector_bf1ba7e0(css_57658326,{"singleTag":true});
 function Warning(_ref) {
   var message = _ref.message;
   return /*#__PURE__*/React.createElement("div", {
+    id: "ck-warn",
     style: {
       border: 'solid medium #ccc',
       borderRadius: '4px',
@@ -2285,7 +2303,7 @@ function useTemplate(template) {
   };
 }
 
-// derive data-uid of user and use to prefix CSS classes
+// derive data-uid of user
 
 function useAppFormat(format) {
   switch (format) {

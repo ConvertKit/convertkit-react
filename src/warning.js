@@ -2,7 +2,7 @@ import React from 'react'
 
 function Warning({ message }) {
   return (
-    <div style={{
+    <div id="ck-warn" style={{
       border: 'solid medium #ccc',
       borderRadius: '4px',
       background: '#ddd',
