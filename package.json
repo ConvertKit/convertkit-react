@@ -5,7 +5,9 @@
   "main": "bin/convertkit-form.js",
   "scripts": {
     "build": "rollup -c",
-    "test": "jest --coverage"
+    "test": "jest",
+    "coverage": "jest --coverage",
+    "nyc": "nyc npm test"
   },
   "repository": {
     "type": "git",
@@ -32,6 +34,7 @@
     "@testing-library/react": "^10.4.5",
     "babel-jest": "^26.1.0",
     "jest": "^26.1.0",
+    "nyc": "^15.1.0",
     "react-dom": "^16.13.1",
     "react-test-renderer": "^16.13.1",
     "rollup-plugin-commonjs": "^10.1.0",

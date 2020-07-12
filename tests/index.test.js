@@ -25,9 +25,10 @@ test('allows styling the form element through class', () => {
 
 test('shows warning when incorrect format is used on template', () => {
   const warningText = 'This template is not available for the chosen format'
-  const { getByText } = render(
+  const { getByText, container } = render(
     <ConvertKitForm formId={FORMID} format="sticky" template="mills" />
   )
+  expect(container.querySelector('#ck-warn')).toBeInTheDocument()
   expect(getByText(warningText)).toBeInTheDocument()
 })
 
@@ -40,6 +41,32 @@ test('hides warning when user opts out', () => {
       hideWarnings={true}
     />
   )
-  expect(container.querySelector('ck-warn')).not.toBeInTheDocument()
+  expect(container.querySelector('#ck-warn')).not.toBeInTheDocument()
+})
+
+test('shows labels', () => {
+  const { getByLabelText } = render(
+    <ConvertKitForm
+      formId={FORMID}
+      template="mills"
+      showLabels={true}
+    />
+  )
+  expect(getByLabelText('First name')).toBeInTheDocument()
+  expect(getByLabelText('Email')).toBeInTheDocument()
+})
+
+test('allows custom label', () => {
+  const { getByLabelText } = render(
+    <ConvertKitForm
+      formId={FORMID}
+      template="mills"
+      showLabels={true}
+      nameLabel="The beginning"
+      emailLabel="The end"
+    />
+  )
+  expect(getByLabelText('The beginning')).toBeInTheDocument()
+  expect(getByLabelText('The end')).toBeInTheDocument()
 })
 
