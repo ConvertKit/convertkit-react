@@ -1,6 +1,6 @@
 # Convertkit React Changelog
 
-### [v1.4.1]
+### [v1.4.1](https://github.com/ConvertKit/convertkit-react/releases/tag/v1.4.1)
 - Change template name rainer to correct name on app -- rainier
 - Convert all template input to lowercase to match right template
 
