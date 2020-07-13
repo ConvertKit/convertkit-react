@@ -70,3 +70,23 @@ test('allows custom label', () => {
   expect(getByLabelText('The end')).toBeInTheDocument()
 })
 
+test('throws error when unavailable template is used', () => {
+  jest.spyOn(console, 'error')
+  console.error.mockImplementation(() => { })
+  expect(() => {
+    render(<ConvertKitForm formId={FORMID} template="fish" />)
+  }).toThrow(ReferenceError)
+  console.error.mockRestore()
+  expect(() => {
+    render(<ConvertKitForm formId={FORMID} template="minimal" />)
+  }).not.toThrow(ReferenceError)
+})
+
+test('converts all templates to lowercase to find correct match', () => {
+  expect(() => {
+    render(<ConvertKitForm formId={FORMID} template="Minimal" />)
+  }).not.toThrow(ReferenceError)
+  expect(() => {
+    render(<ConvertKitForm formId={FORMID} template="MINIMAL" />)
+  }).not.toThrow(ReferenceError)
+})

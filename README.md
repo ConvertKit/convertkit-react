@@ -46,7 +46,7 @@ Here you'll pick out your form id from the form action in the embed code:
 function HomePage() {
   const config = {
     formId: MY_FORM_ID,
-    template: 'rainer',
+    template: 'mills',
     emailPlaceholder: 'Enter an email address',
     submitText: 'Sign up',
   }
@@ -77,7 +77,7 @@ function HomePage() {
 ##### Templates
 The minimal template has no preconfigured styling, leaving you options to style
 as desired. To get a preconfigured style, use one of the app templates
-(clare, rainer, powell etc) as seen on the app.
+(clare, mills, rainier, powell etc) as seen on the app.
 
 
 ## Contributing

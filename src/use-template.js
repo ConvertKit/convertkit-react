@@ -1,7 +1,7 @@
 import Minimal from './templates/minimal'
 import Clare from './templates/clare'
 import Mills from './templates/mills'
-import Rainer from './templates/rainer'
+import Rainier from './templates/rainier'
 import Powell from './templates/powell'
 import Charlotte from './templates/charlotte'
 import Pine from './templates/pine'
@@ -59,22 +59,23 @@ const options = {
 }
 
 const renderTemplate = template => {
+  const templateName = template.toLowerCase()
   const allTemplates = {
     minimal: Minimal,
     clare: Clare,
     mills: Mills,
-    rainer: Rainer,
+    rainier: Rainier,
     powell: Powell,
     charlotte: Charlotte,
     pine: Pine,
   }
 
-  if (!allTemplates.hasOwnProperty(template)) {
+  if (!allTemplates.hasOwnProperty(templateName)) {
     const errorMessage = `The chosen template "${template}" is not yet supported`
     throw new ReferenceError(errorMessage)
   }
 
-  return allTemplates[template]
+  return allTemplates[templateName]
 }
 
 function useTemplate(template) {

@@ -1,5 +1,9 @@
 # Convertkit React Changelog
 
+### [v1.4.1]
+- Change template name rainer to correct name on app -- rainier
+- Convert all template input to lowercase to match right template
+
 ### [v1.4.0](https://github.com/ConvertKit/convertkit-react/releases/tag/v1.4.0)
 
 - Allow passing of class names to the form through ConvertKitForm component
@@ -40,11 +44,11 @@
 
 ### [v1.0.9](https://github.com/ConvertKit/convertkit-react/releases/tag/v1.0.9)
 
-- Change default background image of Rainer inline template
+- Change default background image of Rainier inline template
 
 ### [v1.0.8](https://github.com/ConvertKit/convertkit-react/releases/tag/v1.0.8)
 
-- Add partial support for Mills and Rainer inline templates
+- Add partial support for Mills and Rainier inline templates
 - Change default submit text to "Subscribe"
 
 ### [v1.0.7](https://github.com/ConvertKit/convertkit-react/releases/tag/v1.0.7)
