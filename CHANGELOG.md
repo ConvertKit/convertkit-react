@@ -1,5 +1,8 @@
 # Convertkit React Changelog
 
+### [v1.4.2](https://github.com/ConvertKit/convertkit-react/releases/tag/v1.4.2)
+- Export CJS format to address problems on next.js
+
 ### [v1.4.1](https://github.com/ConvertKit/convertkit-react/releases/tag/v1.4.1)
 - Change template name rainer to correct name on app -- rainier
 - Convert all template input to lowercase to match right template

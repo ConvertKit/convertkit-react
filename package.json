@@ -1,8 +1,9 @@
 {
   "name": "convertkit-react",
-  "version": "1.4.1",
+  "version": "1.4.2",
   "description": "React library to add convertkit forms to React applications",
-  "main": "bin/convertkit-form.js",
+  "main": "bin/convertkit-react.cjs.js",
+  "module": "bin/convertkit-react.esm.js",
   "scripts": {
     "build": "rollup -c",
     "test": "jest",
