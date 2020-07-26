@@ -1,7 +1,7 @@
 import React from 'react'
 import { render } from '@testing-library/react'
 import '@testing-library/jest-dom/extend-expect'
-import ConvertKitForm from '../bin/convertkit-form'
+import ConvertKitForm from '../bin/convertkit-react.esm'
 
 const FORMID = 1234567
 
