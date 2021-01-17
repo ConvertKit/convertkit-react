@@ -1,27 +1,33 @@
 import React from 'react'
 import './pine-styles.css'
-import Warning from '../warning'
+import Warning from '../../warning'
+import BuiltWithBadge from '../../BuiltWithBadge'
+import useScript from '../../use-script'
 
 const ALLOWED_FORMATS = ['inline', 'modal', 'slide in']
 
 const bgImage = '//pages.convertkit.com/assets/rainier/bg.jpg'
 
 function Pine({
-  options,
-  className,
   action,
-  submitText,
-  emailPlaceholder,
-  namePlaceholder,
-  hideName,
-  showLabels,
-  nameLabel,
-  emailLabel,
-  newTab,
   formId,
-  format,
-  hideWarnings,
+  options,
+  hideName = false,
+  showLabels = false,
+  newTab = false,
+  hideWarnings = false,
+  className = '',
+  submitText = 'Subscribe',
+  emailPlaceholder = 'Your email',
+  namePlaceholder = 'Your first name',
+  nameLabel = 'First name',
+  emailLabel = 'Email',
+  format = 'inline',
+  backgroundImage = bgImage,
 }) {
+
+  useScript('https://f.convertkit.com/ckjs/ck.5.js', false)
+
   return (
     <>
       {!hideWarnings && !ALLOWED_FORMATS.includes(format) ? <Warning message="This template is not available for the chosen format" /> : null}
@@ -34,7 +40,7 @@ function Pine({
             </div>
             <div className="formkit-subheader" data-element="subheader" style={{ color: 'rgb(104, 104, 104)', fontSize: '15px' }}>Subscribe to get our latest content by email.</div>
             <div className="formkit-image formkit-image relative focus:outline-none" role="button" tabIndex="0">
-              <img className="cursor-pointer focus:outline-blue " src={bgImage} alt="" style={{ maxWidth: '100%' }} />
+              <img className="cursor-pointer focus:outline-blue " src={backgroundImage} alt="" style={{ maxWidth: '100%' }} />
             </div>
           </div>
           <div data-element="column" className="formkit-column">
@@ -63,7 +69,7 @@ function Pine({
             </div>
             <div className="formkit-guarantee" data-element="guarantee" style={{ color: 'rgb(77, 77, 77)', fontSize: '13px', fontWeight: 400 }}>We respect your privacy. Unsubscribe at any time.</div>
             {options.settings.powered_by.show ? (
-              <a href={options.settings.powered_by.url} className="formkit-powered-by" data-element="powered-by" target="_blank" rel="noopener noreferrer">Powered By ConvertKit</a>
+              <BuiltWithBadge href={options.settings.powered_by.url} />
             ) : null}
           </div>
         </div>

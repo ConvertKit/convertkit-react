@@ -1,5 +1,10 @@
-# Convertkit React Changelog
+# ConvertKit React Changelog
 
+### [v1.4.3](https://github.com/ConvertKit/convertkit-react/releases/tag/v1.4.2)
+- Inject CK script to only non-minimal templates
+- Add support for custom background image and opacity
+- Pass options data attributes to minimal template
+- Use ConvertKit's new "built by" badge.
 ### [v1.4.2](https://github.com/ConvertKit/convertkit-react/releases/tag/v1.4.2)
 - Export CJS format to address problems on next.js
 

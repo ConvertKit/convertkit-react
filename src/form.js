@@ -1,9 +1,6 @@
 import React from 'react'
 import useTemplate from './use-template'
 
-// TO-DO:
-// derive data-uid of user
-
 function useAppFormat(format) {
   switch (format) {
     case 'slidein':
@@ -21,12 +18,7 @@ function Form({
   ...props
 }) {
   const { options, Template } = useTemplate(template)
-  return (
-    <>
-      <script src="https://f.convertkit.com/ckjs/ck.5.js"></script>
-      <Template {...props} options={options} format={useAppFormat(format)} />
-    </>
-  )
+  return <Template {...props} options={options} format={useAppFormat(format)} />
 }
 
 export default Form

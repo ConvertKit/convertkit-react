@@ -6,6 +6,9 @@ import Powell from './templates/powell'
 import Charlotte from './templates/charlotte'
 import Pine from './templates/pine'
 
+// TO-DO:
+// derive data-uid of user
+
 const options = {
   settings: {
     after_subscribe: {

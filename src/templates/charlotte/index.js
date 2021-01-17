@@ -1,33 +1,38 @@
 import React from 'react'
 import './charlotte-styles.css'
-import Warning from '../warning'
+import Warning from '../../warning'
+import BuiltWithBadge from '../../BuiltWithBadge'
+import useScript from '../../use-script'
 
 const ALLOWED_FORMATS = ['inline', 'modal', 'slide in']
 
 const bgImage = '//pages.convertkit.com/assets/charlotte/bg.jpg'
 
 function Charlotte({
-  options,
-  className,
   action,
-  submitText,
-  emailPlaceholder,
-  namePlaceholder,
-  hideName,
-  showLabels,
-  nameLabel,
-  emailLabel,
-  newTab,
   formId,
-  format,
-  hideWarnings,
+  options,
+  hideName = false,
+  showLabels = false,
+  newTab = false,
+  hideWarnings = false,
+  className = '',
+  submitText = 'Subscribe',
+  emailPlaceholder = 'Your email',
+  namePlaceholder = 'Your first name',
+  nameLabel = 'First name',
+  emailLabel = 'Email',
+  format = 'inline',
+  backgroundImage = bgImage,
 }) {
+  useScript('https://f.convertkit.com/ckjs/ck.5.js', false)
+
   return (
     <>
       {!hideWarnings && !ALLOWED_FORMATS.includes(format) ? <Warning message="This template is not available for the chosen format" /> : null}
       <form action={action} className={`seva-form formkit-form charlotte ${className}`} method="post" target={newTab ? '_blank' : '_self'} data-sv-form={formId} data-uid={options.uid} data-format={format} data-version={options.version} data-options={JSON.stringify(options)} min-width="400 500 600 700 800" style={{ backgroundColor: 'rgb(255, 255, 255)', borderRadius: '6px' }}>
         <div data-style="full">
-          <div data-element="column" className="formkit-background" style={{ backgroundImage: `url(${bgImage})` }}></div>
+          <div data-element="column" className="formkit-background" style={{ backgroundImage: `url(${backgroundImage})` }}></div>
           <div data-element="column" className="formkit-column">
             <div className="formkit-header" data-element="header" style={{ color: 'rgb(83, 83, 83)', fontSize: '28px', fontWeight: 700 }}>
               <h1>Get our how to guide</h1>
@@ -57,7 +62,7 @@ function Charlotte({
             </div>
             <div className="formkit-disclaimer" data-element="disclaimer" style={{ color: 'rgb(139, 139, 139)', fontSize: '13px' }}>We respect your privacy. Unsubscribe at any time.</div>
             {options.settings.powered_by.show ? (
-              <a href={options.settings.powered_by.url} className="formkit-powered-by" data-element="powered-by" target="_blank" rel="noopener noreferrer">Powered By ConvertKit</a>
+              <BuiltWithBadge href={options.settings.powered_by.url} />
             ) : null}
           </div>
         </div>

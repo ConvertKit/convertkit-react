@@ -73,6 +73,8 @@ function HomePage() {
 |     newTab       |  `Boolean`   |        `false`       | Determines if form should be processed in new tab or current |
 |      stack       |  `Boolean`   |        `true`        | Determines if inputs are stacked or placed inline            |
 |   hideWarnings   |  `Boolean`   |        `false`       | Hide warnings that are shown due to misconfiguration         |
+|   backgroundImage   |  `String`   | default on template | Use a different background image for your form |
+|   backgroundOpacity   |  `Number`   |  0.8   |  Opacity here is the inverse of what is on the app which really measures transparency  |
 
 ##### Templates
 The minimal template has no preconfigured styling, leaving you options to style

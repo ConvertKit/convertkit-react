@@ -21,21 +21,9 @@ ConvertKitForm.propTypes = {
   newTab: PropTypes.bool,
   stacked: PropTypes.bool,
   hideWarnings: PropTypes.bool,
-}
-
-ConvertKitForm.defaultProps = {
-  format: 'inline',
-  template: 'minimal',
-  submitText: 'Subscribe',
-  emailPlaceholder: 'Your email',
-  namePlaceholder: 'Your first name',
-  nameLabel: 'First name',
-  emailLabel: 'Email',
-  showLabels: false,
-  hideName: false,
-  newTab: false,
-  stacked: true,
-  hideWarnings: false,
+  backgroundImage: PropTypes.string,
+  backgroundOpacity: PropTypes.number,
+  backgroundColor: PropTypes.arrayOf(PropTypes.number)
 }
 
 export default ConvertKitForm

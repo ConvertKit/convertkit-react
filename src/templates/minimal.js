@@ -1,6 +1,7 @@
 import React from 'react'
 
 function Minimal({
+  options,
   className,
   action,
   submitText,
@@ -11,10 +12,11 @@ function Minimal({
   nameLabel,
   emailLabel,
   newTab,
-  formId
+  formId,
+  format
 }) {
   return (
-    <form action={action} method="post" target={newTab ? '_blank' : '_self'} data-sv-form={formId} className={className}>
+    <form action={action} method="post" target={newTab ? '_blank' : '_self'} data-sv-form={formId} data-uid={options.uid} data-format={format} data-version={options.version} data-options={JSON.stringify(options)} className={className}>
       {!hideName && (
         <>
           {showLabels ? <label htmlFor="ck-first-name">{nameLabel}</label> : null}

@@ -1,26 +1,30 @@
 import React from 'react'
 import './clare-styles.css'
-import Warning from '../warning'
+import Warning from '../../warning'
+import BuiltWithBadge from '../../BuiltWithBadge'
+import useScript from '../../use-script'
 
 const ALLOWED_FORMATS = ['inline', 'modal', 'slide in']
 
 function Clare({
-  options,
-  className,
   action,
-  submitText,
-  emailPlaceholder,
-  namePlaceholder,
-  hideName,
-  showLabels,
-  nameLabel,
-  emailLabel,
-  newTab,
   formId,
-  format,
-  stacked,
-  hideWarnings,
+  options,
+  hideName = false,
+  showLabels = false,
+  newTab = false,
+  hideWarnings = false,
+  stacked = true,
+  className = '',
+  submitText = 'Subscribe',
+  emailPlaceholder = 'Your email',
+  namePlaceholder = 'Your first name',
+  nameLabel = 'First name',
+  emailLabel = 'Email',
+  format = 'inline',
 }) {
+  useScript('https://f.convertkit.com/ckjs/ck.5.js', false)
+
   return (
     <>
       {!hideWarnings && !ALLOWED_FORMATS.includes(format) ? <Warning message="This template is not available for the chosen format" /> : null}
@@ -49,7 +53,7 @@ function Clare({
             </button>
           </div>
           {options.settings.powered_by.show ? (
-            <a href={options.settings.powered_by.url} className="formkit-powered-by" data-element="powered-by" target="_blank" rel="noopener noreferrer">Powered By ConvertKit</a>
+            <BuiltWithBadge href={options.settings.powered_by.url} />
           ) : null}
         </div>
       </form>
