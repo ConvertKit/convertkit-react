@@ -2424,7 +2424,8 @@ function useAppFormat(format) {
 function Form(_ref) {
   var _ref$template = _ref.template,
       template = _ref$template === void 0 ? 'minimal' : _ref$template,
-      format = _ref.format,
+      _ref$format = _ref.format,
+      format = _ref$format === void 0 ? 'inline' : _ref$format,
       props = _objectWithoutProperties(_ref, ["template", "format"]);
 
   var _useTemplate = useTemplate(template),

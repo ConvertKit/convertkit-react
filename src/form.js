@@ -14,7 +14,7 @@ function useAppFormat(format) {
 
 function Form({
   template = 'minimal',
-  format,
+  format = 'inline',
   ...props
 }) {
   const { options, Template } = useTemplate(template)
