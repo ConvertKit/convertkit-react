@@ -13,7 +13,7 @@ function useAppFormat(format) {
 }
 
 function Form({
-  template,
+  template = 'minimal',
   format,
   ...props
 }) {
