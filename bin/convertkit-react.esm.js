@@ -1367,19 +1367,29 @@ var propTypes = createCommonjsModule(function (module) {
 });
 
 function Minimal(_ref) {
-  var options = _ref.options,
-      className = _ref.className,
-      action = _ref.action,
-      submitText = _ref.submitText,
-      emailPlaceholder = _ref.emailPlaceholder,
-      namePlaceholder = _ref.namePlaceholder,
-      hideName = _ref.hideName,
-      showLabels = _ref.showLabels,
-      nameLabel = _ref.nameLabel,
-      emailLabel = _ref.emailLabel,
-      newTab = _ref.newTab,
+  var action = _ref.action,
       formId = _ref.formId,
-      format = _ref.format;
+      options = _ref.options,
+      _ref$hideName = _ref.hideName,
+      hideName = _ref$hideName === void 0 ? false : _ref$hideName,
+      _ref$showLabels = _ref.showLabels,
+      showLabels = _ref$showLabels === void 0 ? false : _ref$showLabels,
+      _ref$newTab = _ref.newTab,
+      newTab = _ref$newTab === void 0 ? false : _ref$newTab,
+      _ref$className = _ref.className,
+      className = _ref$className === void 0 ? '' : _ref$className,
+      _ref$submitText = _ref.submitText,
+      submitText = _ref$submitText === void 0 ? 'Subscribe' : _ref$submitText,
+      _ref$emailPlaceholder = _ref.emailPlaceholder,
+      emailPlaceholder = _ref$emailPlaceholder === void 0 ? 'Your email' : _ref$emailPlaceholder,
+      _ref$namePlaceholder = _ref.namePlaceholder,
+      namePlaceholder = _ref$namePlaceholder === void 0 ? 'Your first name' : _ref$namePlaceholder,
+      _ref$nameLabel = _ref.nameLabel,
+      nameLabel = _ref$nameLabel === void 0 ? 'First name' : _ref$nameLabel,
+      _ref$emailLabel = _ref.emailLabel,
+      emailLabel = _ref$emailLabel === void 0 ? 'Email' : _ref$emailLabel,
+      _ref$format = _ref.format,
+      format = _ref$format === void 0 ? 'inline' : _ref$format;
   return /*#__PURE__*/React.createElement("form", {
     action: action,
     method: "post",
@@ -2424,8 +2434,7 @@ function useAppFormat(format) {
 function Form(_ref) {
   var _ref$template = _ref.template,
       template = _ref$template === void 0 ? 'minimal' : _ref$template,
-      _ref$format = _ref.format,
-      format = _ref$format === void 0 ? 'inline' : _ref$format,
+      format = _ref.format,
       props = _objectWithoutProperties(_ref, ["template", "format"]);
 
   var _useTemplate = useTemplate(template),

@@ -1,19 +1,19 @@
 import React from 'react'
 
 function Minimal({
-  options,
-  className,
   action,
-  submitText,
-  emailPlaceholder,
-  namePlaceholder,
-  hideName,
-  showLabels,
-  nameLabel,
-  emailLabel,
-  newTab,
   formId,
-  format
+  options,
+  hideName = false,
+  showLabels = false,
+  newTab = false,
+  className = '',
+  submitText = 'Subscribe',
+  emailPlaceholder = 'Your email',
+  namePlaceholder = 'Your first name',
+  nameLabel = 'First name',
+  emailLabel = 'Email',
+  format = 'inline',
 }) {
   return (
     <form action={action} method="post" target={newTab ? '_blank' : '_self'} data-sv-form={formId} data-uid={options.uid} data-format={format} data-version={options.version} data-options={JSON.stringify(options)} className={className}>

@@ -1,17 +1,27 @@
 import React from 'react'
-import { render } from '@testing-library/react'
+import { render, screen } from '@testing-library/react'
 import '@testing-library/jest-dom/extend-expect'
 import ConvertKitForm from '../bin/convertkit-react.esm'
 
 const FORMID = 1234567
 
+test('defaults are rendered', () => {
+  render(
+    <ConvertKitForm formId={FORMID} />
+  )
+
+  expect(screen.getByRole('button', { name: /subscribe/i })).toBeInTheDocument()
+  expect(screen.getByLabelText('Email')).toBeInTheDocument()
+  expect(screen.getByLabelText('First name')).toBeInTheDocument()
+})
+
 test('custom button text is rendered', () => {
   const btnText = 'Join the list'
-  const { getByText } = render(
+  render(
     <ConvertKitForm formId={FORMID} submitText={btnText} />
   )
 
-  expect(getByText(btnText)).toBeInTheDocument()
+  expect(screen.getByText(btnText)).toBeInTheDocument()
 })
 
 test('allows styling the form element through class', () => {
