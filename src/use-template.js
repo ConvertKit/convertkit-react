@@ -5,6 +5,7 @@ import Rainier from './templates/rainier'
 import Powell from './templates/powell'
 import Charlotte from './templates/charlotte'
 import Pine from './templates/pine'
+import Cocoa from './templates/cocoa'
 
 // TO-DO:
 // derive data-uid of user
@@ -71,6 +72,7 @@ const renderTemplate = template => {
     powell: Powell,
     charlotte: Charlotte,
     pine: Pine,
+    cocoa: Cocoa
   }
 
   if (!allTemplates.hasOwnProperty(templateName)) {

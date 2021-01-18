@@ -23,7 +23,8 @@ ConvertKitForm.propTypes = {
   hideWarnings: PropTypes.bool,
   backgroundImage: PropTypes.string,
   backgroundOpacity: PropTypes.number,
-  backgroundColor: PropTypes.arrayOf(PropTypes.number)
+  backgroundColor: PropTypes.arrayOf(PropTypes.number),
+  borderRadius: PropTypes.number
 }
 
 export default ConvertKitForm
