@@ -8,28 +8,35 @@ const ALLOWED_FORMATS = ['inline', 'modal', 'slide in']
 
 const bgImage = '//pages.convertkit.com/assets/powell/bg.jpg'
 
+const DefaultContent = () => (
+  <p>Subscribe to get our latest content by email.</p>
+)
+
 function Powell({
   action,
   formId,
   options,
-  hideName = false,
+  hideName = true,
   showLabels = false,
   newTab = false,
   hideWarnings = false,
   className = '',
   submitText = 'Subscribe',
-  emailPlaceholder = 'Your email',
-  namePlaceholder = 'Your first name',
+  emailPlaceholder = 'Email Address',
+  namePlaceholder = 'First Name',
   nameLabel = 'First name',
   emailLabel = 'Email',
   format = 'inline',
   backgroundImage = bgImage,
   backgroundOpacity = 0.8,
-  backgroundColor = [251,105,112]
+  backgroundColor = [251,105,112],
+  headingText = 'Join the newsletter',
+  disclaimerText = "We won't send you spam. Unsubscribe at any time.",
+  children = <DefaultContent />
 }) {
   const bgColor = backgroundColor.join(' ').concat(`/${backgroundOpacity}`)
 
-  useScript('https://f.convertkit.com/ckjs/ck.5.js', false)
+  useScript('https://f.convertkit.com/ckjs/ck.5.js')
 
   return (
     <>
@@ -38,11 +45,13 @@ function Powell({
         <div data-style="card">
           <div data-element="column" className="formkit-column" style={{ background: `linear-gradient(rgb(${bgColor}), rgb(${bgColor})), url(${backgroundImage})`, backgroundSize: 'cover', backgroundPosition: 'center', color: 'rgb(255, 255, 255)', fontSize: '22px', fontWeight: 700 }}>
             <div className="formkit-header" data-element="header">
-              <h1>Join the newsletter</h1>
+              <h1>{headingText}</h1>
             </div>
           </div>
           <div data-element="column" className="formkit-column">
-            <div className="formkit-subheader" data-element="subheader" style={{ color: 'rgb(125 125 125)', fontSize: '16px' }}>Subscribe to get our latest content by email.</div>
+            <div className="formkit-subheader" data-element="subheader" style={{ color: 'rgb(125 125 125)', fontSize: '16px' }}>
+              {children}
+            </div>
             <ul className="formkit-alert formkit-alert-error" data-element="errors" data-group="alert"></ul>
             <div data-element="fields" className="seva-fields formkit-fields">
               {!hideName && (
@@ -66,9 +75,11 @@ function Powell({
                 <span>{submitText}</span>
               </button>
             </div>
-            <div className="formkit-guarantee" data-element="guarantee" style={{ color: 'rgb(125 125 125)', fontSize: '13px', fontWeight: 400 }}>We won't send you spam. Unsubscribe at any time.</div>
+            <div className="formkit-guarantee" data-element="guarantee" style={{ color: 'rgb(125 125 125)', fontSize: '13px', fontWeight: 400 }}>
+              {disclaimerText}
+            </div>
             {options.settings.powered_by.show ? (
-              <BuiltWithBadge href={options.settings.powered_by.url} />
+              <BuiltWithBadge href={options.settings.powered_by.url} data-variant="dark" />
             ) : null}
           </div>
         </div>

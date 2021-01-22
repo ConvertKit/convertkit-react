@@ -64,6 +64,8 @@ function HomePage() {
 |     format       |   `String`   |        inline        | inline, modal, slidein, sticky   |
 |     template     |   `String`   |       minimal        | _Templates in the app + minimal_ |
 |    submitText    |   `String`   |      Subscribe       | Text shown in submit button      |
+|    headingText   |   `String`   |  Varies per template | Text shown in heading   |
+|  disclaimerText  |   `String`   |  Varies per template | Text shown in disclaimer area    |
 | emailPlaceholder |   `String`   |      Your email      | Placeholder for email input      |
 | namePlaceholder  |   `String`   |   Your first name    | Placeholder for first name input |
 |    nameLabel     |   `String`   |      First name      | Custom name label                |
@@ -80,6 +82,16 @@ function HomePage() {
 The minimal template has no preconfigured styling, leaving you options to style
 as desired. To get a preconfigured style, use one of the app templates
 (clare, mills, rainier, powell etc) as seen on the app.
+
+##### Content
+To change the subheader (sometimes referred to as content) you may just add children
+inside the `<ConvertkitForm>` component like below:
+
+```jsx
+<ConvertKitForm {...config}>
+  <p>Subscribe to get our latest content by email.</p>
+</ConvertKitForm>
+```
 
 
 ## Contributing

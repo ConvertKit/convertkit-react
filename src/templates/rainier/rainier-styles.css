@@ -380,7 +380,7 @@
   -ms-flex-align: center;
   align-items: center;
   background-color: #ffffff;
-  border: 1px solid #dce1e5;
+  border: 0;
   border-radius: 4px;
   color: #373f45;
   cursor: pointer;

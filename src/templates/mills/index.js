@@ -6,25 +6,32 @@ import useScript from '../../use-script'
 
 const ALLOWED_FORMATS = ['inline', 'modal', 'slide in']
 
+const DefaultContent = () => (
+  <p>Subscribe to get our latest content by email.</p>
+)
+
 function Mills({
   action,
   formId,
   options,
-  hideName = false,
+  hideName = true,
   showLabels = false,
   newTab = false,
   hideWarnings = false,
-  stacked = true,
+  stacked = false,
   className = '',
   submitText = 'Subscribe',
-  emailPlaceholder = 'Your email',
-  namePlaceholder = 'Your first name',
+  disclaimerText = "We won't send you spam. Unsubscribe at any time.",
+  emailPlaceholder = 'Email Address',
+  namePlaceholder = 'First Name',
   nameLabel = 'First name',
   emailLabel = 'Email',
   format = 'inline',
+  headingText = 'Join the Newsletter',
+  children = <DefaultContent />
 }) {
 
-  useScript('https://f.convertkit.com/ckjs/ck.5.js', false)
+  useScript('https://f.convertkit.com/ckjs/ck.5.js')
 
   return (
     <>
@@ -33,9 +40,11 @@ function Mills({
         <div className="formkit-background" style={{ opacity: 0.2 }}></div>
         <div data-style="minimal">
           <div className="formkit-header" data-element="header" style={{ color: 'rgb(77, 77, 77)', fontSize: '27px', fontWeight: 700, textAlign: 'center' }}>
-            <h1>Join the Newsletter</h1>
+            <h1>{headingText}</h1>
           </div>
-          <div className="formkit-subheader" data-element="subheader" style={{ color: 'rgb(104 104 104)', fontsize: '18px' }}>Subscribe to get our latest content by email.</div>
+          <div className="formkit-subheader" data-element="subheader" style={{ color: 'rgb(104 104 104)', fontsize: '18px' }}>
+            {children}
+          </div>
           <ul className="formkit-alert formkit-alert-error" data-element="errors" data-group="alert"></ul>
           <div data-element="fields" data-stacked={stacked} className="seva-fields formkit-fields">
             {!hideName && (
@@ -59,9 +68,11 @@ function Mills({
               <span>{submitText}</span>
             </button>
           </div>
-          <div className="formkit-guarantee" data-element="guarantee" style={{ color: 'rgb(77 77 77)', fontSize: '13px', fontWeight: 400 }}>We won't send you spam. Unsubscribe at any time.</div>
+          <div className="formkit-guarantee" data-element="guarantee" style={{ color: 'rgb(77 77 77)', fontSize: '13px', fontWeight: 400 }}>
+            {disclaimerText}
+          </div>
           {options.settings.powered_by.show ? (
-            <BuiltWithBadge href={options.settings.powered_by.url} />
+            <BuiltWithBadge href={options.settings.powered_by.url} data-variant="dark" />
           ) : null}
         </div>
       </form>

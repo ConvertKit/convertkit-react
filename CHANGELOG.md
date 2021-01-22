@@ -1,15 +1,23 @@
 # ConvertKit React Changelog
 
+### [v1.5.0](https://github.com/ConvertKit/convertkit-react/releases/tag/v1.5.0)
+- Add poplar and monterey templates
+- Add configuration for `headingText`, `disclaimerText`, `thumbnailImage` (for pine) and custom `children` props for content.
+- Create better defaults per template as seen in app
+
 ### [v1.4.7](https://github.com/ConvertKit/convertkit-react/releases/tag/v1.4.7)
 - Add cocoa template
 - Add borderRadius configuration support for cocoa
+
 ### [v1.4.4](https://github.com/ConvertKit/convertkit-react/releases/tag/v1.4.4) - [v1.4.6](https://github.com/ConvertKit/convertkit-react/releases/tag/v1.4.6)
 - Fix bugs from 1.4.3
+
 ### [v1.4.3](https://github.com/ConvertKit/convertkit-react/releases/tag/v1.4.3)
 - Inject CK script to only non-minimal templates
 - Add support for custom background image and opacity
 - Pass options data attributes to minimal template
 - Use ConvertKit's new "built by" badge.
+
 ### [v1.4.2](https://github.com/ConvertKit/convertkit-react/releases/tag/v1.4.2)
 - Export CJS format to address problems on next.js
 

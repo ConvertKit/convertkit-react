@@ -59,6 +59,7 @@ test('shows labels', () => {
     <ConvertKitForm
       formId={FORMID}
       template="mills"
+      hideName={false}
       showLabels={true}
     />
   )
@@ -71,6 +72,7 @@ test('allows custom label', () => {
     <ConvertKitForm
       formId={FORMID}
       template="mills"
+      hideName={false}
       showLabels={true}
       nameLabel="The beginning"
       emailLabel="The end"

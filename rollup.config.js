@@ -8,7 +8,7 @@ export default {
   input: 'src/index.js',
   output: [
     { file: 'bin/convertkit-react.esm.js', format: 'es' },
-    { file: 'bin/convertkit-react.cjs.js', format: 'cjs' }
+    { file: 'bin/convertkit-react.cjs.js', format: 'cjs', exports: 'default' }
   ],
   plugins: [
     resolve(),

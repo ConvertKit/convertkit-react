@@ -12,20 +12,22 @@ function Charlotte({
   action,
   formId,
   options,
-  hideName = false,
+  hideName = true,
   showLabels = false,
   newTab = false,
   hideWarnings = false,
   className = '',
-  submitText = 'Subscribe',
+  submitText = 'Send me the guide',
+  disclaimerText = 'We respect your privacy. Unsubscribe at any time.',
   emailPlaceholder = 'Your email',
   namePlaceholder = 'Your first name',
   nameLabel = 'First name',
   emailLabel = 'Email',
+  headingText = 'Get our how to guide',
   format = 'inline',
   backgroundImage = bgImage,
 }) {
-  useScript('https://f.convertkit.com/ckjs/ck.5.js', false)
+  useScript('https://f.convertkit.com/ckjs/ck.5.js')
 
   return (
     <>
@@ -35,7 +37,7 @@ function Charlotte({
           <div data-element="column" className="formkit-background" style={{ backgroundImage: `url(${backgroundImage})` }}></div>
           <div data-element="column" className="formkit-column">
             <div className="formkit-header" data-element="header" style={{ color: 'rgb(83, 83, 83)', fontSize: '28px', fontWeight: 700 }}>
-              <h1>Get our how to guide</h1>
+              <h1>{headingText}</h1>
             </div>
             <ul className="formkit-alert formkit-alert-error" data-element="errors" data-group="alert"></ul>
             <div data-element="fields" className="seva-fields formkit-fields">
@@ -60,9 +62,11 @@ function Charlotte({
                 <span>{submitText}</span>
               </button>
             </div>
-            <div className="formkit-disclaimer" data-element="disclaimer" style={{ color: 'rgb(139, 139, 139)', fontSize: '13px' }}>We respect your privacy. Unsubscribe at any time.</div>
+            <div className="formkit-disclaimer" data-element="disclaimer" style={{ color: 'rgb(139, 139, 139)', fontSize: '13px' }}>
+              {disclaimerText}
+            </div>
             {options.settings.powered_by.show ? (
-              <BuiltWithBadge href={options.settings.powered_by.url} />
+              <BuiltWithBadge href={options.settings.powered_by.url} data-variant="dark" />
             ) : null}
           </div>
         </div>

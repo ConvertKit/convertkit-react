@@ -6,6 +6,8 @@ import Powell from './templates/powell'
 import Charlotte from './templates/charlotte'
 import Pine from './templates/pine'
 import Cocoa from './templates/cocoa'
+import Poplar from './templates/poplar'
+import Monterey from './templates/monterey'
 
 // TO-DO:
 // derive data-uid of user
@@ -72,7 +74,9 @@ const renderTemplate = template => {
     powell: Powell,
     charlotte: Charlotte,
     pine: Pine,
-    cocoa: Cocoa
+    cocoa: Cocoa,
+    poplar: Poplar,
+    monterey: Monterey
   }
 
   if (!allTemplates.hasOwnProperty(templateName)) {

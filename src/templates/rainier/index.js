@@ -8,29 +8,35 @@ const ALLOWED_FORMATS = ['inline', 'modal', 'slide in']
 
 const bgImage = '//pages.convertkit.com/assets/rainier/bg.jpg'
 
+const DefaultContent = () => (
+  <p>Receive tips and tricks on how to travel the world</p>
+)
+
 function Rainier({
   action,
   formId,
   options,
-  hideName = false,
+  hideName = true,
   showLabels = false,
   newTab = false,
   hideWarnings = false,
-  stacked = true,
+  stacked = false,
   className = '',
-  submitText = 'Subscribe',
-  emailPlaceholder = 'Your email',
-  namePlaceholder = 'Your first name',
+  submitText = 'Send it my way!',
+  emailPlaceholder = 'Email Address',
+  namePlaceholder = 'First Name',
   nameLabel = 'First name',
   emailLabel = 'Email',
   format = 'inline',
   backgroundImage = bgImage,
   backgroundOpacity = 0.8,
-  backgroundColor = [16,16,16]
+  backgroundColor = [16,16,16],
+  headingText = 'Join the Newsletter',
+  children = <DefaultContent />
 }) {
   const bgColor = backgroundColor.join(' ').concat(`/${backgroundOpacity}`)
 
-  useScript('https://f.convertkit.com/ckjs/ck.5.js', false)
+  useScript('https://f.convertkit.com/ckjs/ck.5.js')
 
   return (
     <>
@@ -40,11 +46,11 @@ function Rainier({
           <div className="formkit-hero">
             <div className="formkit-hero-bg-color" style={{ backgroundImage: `linear-gradient(rgb(${bgColor}), rgb(${bgColor})), url(${backgroundImage})`, backgroundSize: 'cover', backgroundPosition: 'center' }}></div>
             <div className="formkit-header" data-element="header" style={{ fontSize: '27px', fontWeight: 700, marginBottom: '20px', color: 'rgb(255 255 255)' }}>
-              <h1>Join the Newsletter</h1>
+              <h1>{headingText}</h1>
               <p>​</p>
             </div>
             <div className="formkit-content" data-element="content" style={{ color: 'rgb(255 255 255)', fontSize: '18px', fontWeight: 400 }}>
-              <p>Receive tips and tricks on how to travel the world</p>
+              {children}
             </div>
           </div>
           <div>
@@ -52,7 +58,7 @@ function Rainier({
             <div data-element="fields" data-stacked={stacked} className="seva-fields formkit-fields">
               {!hideName && (
                 <>
-                  {showLabels ? <label htmlFor="ck-first-form">{nameLabel}</label> : null}
+                  {showLabels ? <label htmlFor="ck-first-name">{nameLabel}</label> : null}
                   <div className="formkit-field">
                     <input className="formkit-input" aria-label={nameLabel} name="fields[first_name]" placeholder={namePlaceholder} type="text" style={{ color: 'rgb(146 146 146)', borderColor: 'rgb(228 231 234)', borderRadius: 0, fontWeight: 400 }} id="ck-first-name" />
                   </div>
@@ -72,7 +78,7 @@ function Rainier({
               </button>
             </div>
             {options.settings.powered_by.show ? (
-              <BuiltWithBadge href={options.settings.powered_by.url} />
+              <BuiltWithBadge href={options.settings.powered_by.url} data-variant="dark" />
             ) : null}
           </div>
         </div>

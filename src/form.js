@@ -1,7 +1,7 @@
 import React from 'react'
 import useTemplate from './use-template'
 
-function useAppFormat(format) {
+function formFormat(format) {
   switch (format) {
     case 'slidein':
       return 'slide in'
@@ -18,7 +18,7 @@ function Form({
   ...props
 }) {
   const { options, Template } = useTemplate(template)
-  return <Template {...props} options={options} format={useAppFormat(format)} />
+  return <Template {...props} options={options} format={formFormat(format)} />
 }
 
 export default Form

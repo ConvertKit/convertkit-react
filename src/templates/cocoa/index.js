@@ -9,6 +9,10 @@ const ALLOWED_FORMATS = ['inline', 'modal', 'slide in']
 
 const bgImage = '//embed.filekitcdn.com/e/2owDSJCEZcjwZhVLK4rMrK/2vJTtpQyc87b2ZVG9bQ3aA'
 
+const DefaultContent = () => (
+  <p>Subscribe below and we’ll notify you when the product is released.</p>
+)
+
 function Cocoa({
   action,
   formId,
@@ -19,6 +23,7 @@ function Cocoa({
   hideWarnings = false,
   className = '',
   submitText = 'Download',
+  disclaimerText = 'We respect your privacy. Unsubscribe at any time.',
   emailPlaceholder = 'Your email',
   namePlaceholder = 'Your first name',
   nameLabel = 'First name',
@@ -26,12 +31,14 @@ function Cocoa({
   format = 'inline',
   backgroundImage = bgImage,
   backgroundColor = [46,46,46],
-  borderRadius = 0
+  borderRadius = 0,
+  headingText = 'Join the waitlist',
+  children = <DefaultContent />
 }) {
   const bgColor = backgroundColor.join(' ')
   const formRadius = `${borderRadius}px`
 
-  useScript('https://f.convertkit.com/ckjs/ck.5.js', false)
+  useScript('https://f.convertkit.com/ckjs/ck.5.js')
 
   return (
     <>
@@ -40,10 +47,10 @@ function Cocoa({
         <div data-style="full" style={{'--border-radius': formRadius}}>
           <div className="formkit-container" style={{ backgroundImage: `linear-gradient(180deg, rgb(${bgColor} / .3) 0%, rgb(${bgColor} / .73) 64%, rgb(${bgColor}) 89%), url(${backgroundImage})`}}>
             <div className="formkit-header" data-element="header" style={{color: 'rgb(255 255 255)', fontWeight: 700}}>
-              <h1>Join the waitlist</h1>
+              <h1>{headingText}</h1>
             </div>
             <div className="formkit-content" data-element="content" style={{color: 'rgb(255 255 255)'}}>
-              <p>Subscribe below and we’ll notify you when the product is released.</p>
+              {children}
             </div>
             <ul className="formkit-alert formkit-alert-error" data-element="errors" data-group="alert"></ul>
             <div data-element="fields" className="seva-fields formkit-fields" style={{color: 'rgb(255 255 255)'}}>
@@ -68,7 +75,9 @@ function Cocoa({
                 <span>{submitText}</span>
               </button>
             </div>
-            <div className="formkit-disclaimer" data-element="disclaimer" style={{color: 'rgb(203 203 203)'}}>We respect your privacy. Unsubscribe at any time.</div>
+            <div className="formkit-disclaimer" data-element="disclaimer" style={{color: 'rgb(203 203 203)'}}>
+              {disclaimerText}
+            </div>
             {options.settings.powered_by.show ? (
               <BuiltWithBadge href={options.settings.powered_by.url} data-variant="light" />
             ) : null}

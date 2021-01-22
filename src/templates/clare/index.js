@@ -14,16 +14,16 @@ function Clare({
   showLabels = false,
   newTab = false,
   hideWarnings = false,
-  stacked = true,
+  stacked = false,
   className = '',
   submitText = 'Subscribe',
-  emailPlaceholder = 'Your email',
+  emailPlaceholder = 'Your email address',
   namePlaceholder = 'Your first name',
   nameLabel = 'First name',
   emailLabel = 'Email',
   format = 'inline',
 }) {
-  useScript('https://f.convertkit.com/ckjs/ck.5.js', false)
+  useScript('https://f.convertkit.com/ckjs/ck.5.js')
 
   return (
     <>
@@ -35,7 +35,7 @@ function Clare({
           <div data-element="fields" data-stacked={stacked} className="seva-fields formkit-fields">
             {!hideName && (
               <>
-                {showLabels ? <label htmlFor="ck-first-form">{nameLabel}</label> : null}
+                {showLabels ? <label htmlFor="ck-first-name">{nameLabel}</label> : null}
                 <div className="formkit-field">
                   <input className="formkit-input" aria-label={nameLabel} name="fields[first_name]" placeholder={namePlaceholder} type="text" style={{ color: 'rgb(0, 0, 0)', borderColor: 'rgb(227, 227, 227)', borderRadius: '4px', fontWeight: 400 }} id="ck-first-name" />
                 </div>
