@@ -1,9 +1,11 @@
 <div align="center">
   <h1>ConvertKit React</h1>
-  <img src="https://raw.githubusercontent.com/ConvertKit/convertkit-react/main/static/convertKit-react.png" alt="ConvertKit React Logo" width="200" />
+  <img src="https://raw.githubusercontent.com/ConvertKit/convertkit-react/main/static/convertKit-react.png" alt="ConvertKit React Logo" width="200" height="126" />
   <p>Easily plug convertkit forms to your React and Gatsby websites.</p>
 </div>
 
+
+Using Vue? Try [ConvertKit-Vue](https://npm.im/convertkit-vue)
 ## Setup
 
 ```sh
