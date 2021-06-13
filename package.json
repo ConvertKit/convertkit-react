@@ -1,6 +1,6 @@
 {
   "name": "convertkit-react",
-  "version": "1.5.4",
+  "version": "1.5.5-beta.0",
   "type": "module",
   "description": "React library to add convertkit forms to React applications",
   "main": "bin/convertkit-react.cjs.js",
@@ -26,7 +26,8 @@
   },
   "peerDependencies": {
     "react": ">= 16.8.0",
-    "react-dom": ">= 16.8.0"
+    "react-dom": ">= 16.8.0",
+    "prop-types": "~15.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.14.5",
