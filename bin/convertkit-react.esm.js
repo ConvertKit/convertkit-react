@@ -85,12 +85,33 @@ function _objectWithoutProperties(source, excluded) {
   return target;
 }
 
+function getAugmentedNamespace(n) {
+	if (n.__esModule) return n;
+	var a = Object.defineProperty({}, '__esModule', {value: true});
+	Object.keys(n).forEach(function (k) {
+		var d = Object.getOwnPropertyDescriptor(n, k);
+		Object.defineProperty(a, k, d.get ? d : {
+			enumerable: true,
+			get: function () {
+				return n[k];
+			}
+		});
+	});
+	return a;
+}
+
 var propTypes = {exports: {}};
 
 var reactIs = {exports: {}};
 
-var reactIs_production_min = {};
-
+/** @license React v16.13.1
+ * react-is.production.min.js
+ *
+ * Copyright (c) Facebook, Inc. and its affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
 var b = "function" === typeof Symbol && Symbol["for"],
     c = b ? Symbol["for"]("react.element") : 60103,
     d = b ? Symbol["for"]("react.portal") : 60106,
@@ -151,77 +172,90 @@ function A(a) {
   return z(a) === m;
 }
 
-reactIs_production_min.AsyncMode = l;
-reactIs_production_min.ConcurrentMode = m;
-reactIs_production_min.ContextConsumer = k;
-reactIs_production_min.ContextProvider = h;
-reactIs_production_min.Element = c;
-reactIs_production_min.ForwardRef = n$1;
-reactIs_production_min.Fragment = e$1;
-reactIs_production_min.Lazy = t$1;
-reactIs_production_min.Memo = r;
-reactIs_production_min.Portal = d;
-reactIs_production_min.Profiler = g;
-reactIs_production_min.StrictMode = f;
-reactIs_production_min.Suspense = p;
+exports.AsyncMode = l;
+exports.ConcurrentMode = m;
+exports.ContextConsumer = k;
+exports.ContextProvider = h;
+exports.Element = c;
+exports.ForwardRef = n$1;
+exports.Fragment = e$1;
+exports.Lazy = t$1;
+exports.Memo = r;
+exports.Portal = d;
+exports.Profiler = g;
+exports.StrictMode = f;
+exports.Suspense = p;
 
-reactIs_production_min.isAsyncMode = function (a) {
+exports.isAsyncMode = function (a) {
   return A(a) || z(a) === l;
 };
 
-reactIs_production_min.isConcurrentMode = A;
+exports.isConcurrentMode = A;
 
-reactIs_production_min.isContextConsumer = function (a) {
+exports.isContextConsumer = function (a) {
   return z(a) === k;
 };
 
-reactIs_production_min.isContextProvider = function (a) {
+exports.isContextProvider = function (a) {
   return z(a) === h;
 };
 
-reactIs_production_min.isElement = function (a) {
+exports.isElement = function (a) {
   return "object" === _typeof(a) && null !== a && a.$$typeof === c;
 };
 
-reactIs_production_min.isForwardRef = function (a) {
+exports.isForwardRef = function (a) {
   return z(a) === n$1;
 };
 
-reactIs_production_min.isFragment = function (a) {
+exports.isFragment = function (a) {
   return z(a) === e$1;
 };
 
-reactIs_production_min.isLazy = function (a) {
+exports.isLazy = function (a) {
   return z(a) === t$1;
 };
 
-reactIs_production_min.isMemo = function (a) {
+exports.isMemo = function (a) {
   return z(a) === r;
 };
 
-reactIs_production_min.isPortal = function (a) {
+exports.isPortal = function (a) {
   return z(a) === d;
 };
 
-reactIs_production_min.isProfiler = function (a) {
+exports.isProfiler = function (a) {
   return z(a) === g;
 };
 
-reactIs_production_min.isStrictMode = function (a) {
+exports.isStrictMode = function (a) {
   return z(a) === f;
 };
 
-reactIs_production_min.isSuspense = function (a) {
+exports.isSuspense = function (a) {
   return z(a) === p;
 };
 
-reactIs_production_min.isValidElementType = function (a) {
+exports.isValidElementType = function (a) {
   return "string" === typeof a || "function" === typeof a || a === e$1 || a === m || a === g || a === f || a === p || a === q || "object" === _typeof(a) && null !== a && (a.$$typeof === t$1 || a.$$typeof === r || a.$$typeof === h || a.$$typeof === k || a.$$typeof === n$1 || a.$$typeof === w || a.$$typeof === x || a.$$typeof === y || a.$$typeof === v);
 };
 
-reactIs_production_min.typeOf = z;
+exports.typeOf = z;
 
-var reactIs_development = {};
+var reactIs_production_min = /*#__PURE__*/Object.freeze({
+  __proto__: null
+});
+
+var require$$0 = /*@__PURE__*/getAugmentedNamespace(reactIs_production_min);
+
+/** @license React v16.13.1
+ * react-is.development.js
+ *
+ * Copyright (c) Facebook, Inc. and its affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
 
 if (process.env.NODE_ENV !== "production") {
   (function () {
@@ -371,138 +405,48 @@ if (process.env.NODE_ENV !== "production") {
       return typeOf(object) === REACT_SUSPENSE_TYPE;
     }
 
-    reactIs_development.AsyncMode = AsyncMode;
-    reactIs_development.ConcurrentMode = ConcurrentMode;
-    reactIs_development.ContextConsumer = ContextConsumer;
-    reactIs_development.ContextProvider = ContextProvider;
-    reactIs_development.Element = Element;
-    reactIs_development.ForwardRef = ForwardRef;
-    reactIs_development.Fragment = Fragment;
-    reactIs_development.Lazy = Lazy;
-    reactIs_development.Memo = Memo;
-    reactIs_development.Portal = Portal;
-    reactIs_development.Profiler = Profiler;
-    reactIs_development.StrictMode = StrictMode;
-    reactIs_development.Suspense = Suspense;
-    reactIs_development.isAsyncMode = isAsyncMode;
-    reactIs_development.isConcurrentMode = isConcurrentMode;
-    reactIs_development.isContextConsumer = isContextConsumer;
-    reactIs_development.isContextProvider = isContextProvider;
-    reactIs_development.isElement = isElement;
-    reactIs_development.isForwardRef = isForwardRef;
-    reactIs_development.isFragment = isFragment;
-    reactIs_development.isLazy = isLazy;
-    reactIs_development.isMemo = isMemo;
-    reactIs_development.isPortal = isPortal;
-    reactIs_development.isProfiler = isProfiler;
-    reactIs_development.isStrictMode = isStrictMode;
-    reactIs_development.isSuspense = isSuspense;
-    reactIs_development.isValidElementType = isValidElementType;
-    reactIs_development.typeOf = typeOf;
+    exports.AsyncMode = AsyncMode;
+    exports.ConcurrentMode = ConcurrentMode;
+    exports.ContextConsumer = ContextConsumer;
+    exports.ContextProvider = ContextProvider;
+    exports.Element = Element;
+    exports.ForwardRef = ForwardRef;
+    exports.Fragment = Fragment;
+    exports.Lazy = Lazy;
+    exports.Memo = Memo;
+    exports.Portal = Portal;
+    exports.Profiler = Profiler;
+    exports.StrictMode = StrictMode;
+    exports.Suspense = Suspense;
+    exports.isAsyncMode = isAsyncMode;
+    exports.isConcurrentMode = isConcurrentMode;
+    exports.isContextConsumer = isContextConsumer;
+    exports.isContextProvider = isContextProvider;
+    exports.isElement = isElement;
+    exports.isForwardRef = isForwardRef;
+    exports.isFragment = isFragment;
+    exports.isLazy = isLazy;
+    exports.isMemo = isMemo;
+    exports.isPortal = isPortal;
+    exports.isProfiler = isProfiler;
+    exports.isStrictMode = isStrictMode;
+    exports.isSuspense = isSuspense;
+    exports.isValidElementType = isValidElementType;
+    exports.typeOf = typeOf;
   })();
 }
 
+var reactIs_development = /*#__PURE__*/Object.freeze({
+  __proto__: null
+});
+
+var require$$1$1 = /*@__PURE__*/getAugmentedNamespace(reactIs_development);
+
 if (process.env.NODE_ENV === 'production') {
-  reactIs.exports = reactIs_production_min;
+  reactIs.exports = require$$0;
 } else {
-  reactIs.exports = reactIs_development;
+  reactIs.exports = require$$1$1;
 }
-
-/*
-object-assign
-(c) Sindre Sorhus
-@license MIT
-*/
-/* eslint-disable no-unused-vars */
-
-
-var getOwnPropertySymbols = Object.getOwnPropertySymbols;
-var hasOwnProperty = Object.prototype.hasOwnProperty;
-var propIsEnumerable = Object.prototype.propertyIsEnumerable;
-
-function toObject(val) {
-  if (val === null || val === undefined) {
-    throw new TypeError('Object.assign cannot be called with null or undefined');
-  }
-
-  return Object(val);
-}
-
-function shouldUseNative() {
-  try {
-    if (!Object.assign) {
-      return false;
-    } // Detect buggy property enumeration order in older V8 versions.
-    // https://bugs.chromium.org/p/v8/issues/detail?id=4118
-
-
-    var test1 = new String('abc'); // eslint-disable-line no-new-wrappers
-
-    test1[5] = 'de';
-
-    if (Object.getOwnPropertyNames(test1)[0] === '5') {
-      return false;
-    } // https://bugs.chromium.org/p/v8/issues/detail?id=3056
-
-
-    var test2 = {};
-
-    for (var i = 0; i < 10; i++) {
-      test2['_' + String.fromCharCode(i)] = i;
-    }
-
-    var order2 = Object.getOwnPropertyNames(test2).map(function (n) {
-      return test2[n];
-    });
-
-    if (order2.join('') !== '0123456789') {
-      return false;
-    } // https://bugs.chromium.org/p/v8/issues/detail?id=3056
-
-
-    var test3 = {};
-    'abcdefghijklmnopqrst'.split('').forEach(function (letter) {
-      test3[letter] = letter;
-    });
-
-    if (Object.keys(Object.assign({}, test3)).join('') !== 'abcdefghijklmnopqrst') {
-      return false;
-    }
-
-    return true;
-  } catch (err) {
-    // We don't expect any of the above to throw, but better to be safe.
-    return false;
-  }
-}
-
-var objectAssign = shouldUseNative() ? Object.assign : function (target, source) {
-  var from;
-  var to = toObject(target);
-  var symbols;
-
-  for (var s = 1; s < arguments.length; s++) {
-    from = Object(arguments[s]);
-
-    for (var key in from) {
-      if (hasOwnProperty.call(from, key)) {
-        to[key] = from[key];
-      }
-    }
-
-    if (getOwnPropertySymbols) {
-      symbols = getOwnPropertySymbols(from);
-
-      for (var i = 0; i < symbols.length; i++) {
-        if (propIsEnumerable.call(from, symbols[i])) {
-          to[symbols[i]] = from[symbols[i]];
-        }
-      }
-    }
-  }
-
-  return to;
-};
 
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
@@ -511,100 +455,14 @@ var objectAssign = shouldUseNative() ? Object.assign : function (target, source)
  * LICENSE file in the root directory of this source tree.
  */
 
-var ReactPropTypesSecret$3 = 'SECRET_DO_NOT_PASS_THIS_OR_YOU_WILL_BE_FIRED';
-var ReactPropTypesSecret_1 = ReactPropTypesSecret$3;
+var ReactIs$1 = require('react-is');
 
-var printWarning$1 = function printWarning() {};
+var assign = require('object-assign');
 
-if (process.env.NODE_ENV !== 'production') {
-  var ReactPropTypesSecret$2 = ReactPropTypesSecret_1;
-  var loggedTypeFailures = {};
-  var has$1 = Function.call.bind(Object.prototype.hasOwnProperty);
+var ReactPropTypesSecret$2 = require('./lib/ReactPropTypesSecret');
 
-  printWarning$1 = function printWarning(text) {
-    var message = 'Warning: ' + text;
+var checkPropTypes = require('./checkPropTypes');
 
-    if (typeof console !== 'undefined') {
-      console.error(message);
-    }
-
-    try {
-      // --- Welcome to debugging React ---
-      // This error was thrown as a convenience so that you can use this stack
-      // to find the callsite that caused this warning to fire.
-      throw new Error(message);
-    } catch (x) {}
-  };
-}
-/**
- * Assert that the values match with the type specs.
- * Error messages are memorized and will only be shown once.
- *
- * @param {object} typeSpecs Map of name to a ReactPropType
- * @param {object} values Runtime values that need to be type-checked
- * @param {string} location e.g. "prop", "context", "child context"
- * @param {string} componentName Name of the component for error messages.
- * @param {?Function} getStack Returns the component stack.
- * @private
- */
-
-
-function checkPropTypes$1(typeSpecs, values, location, componentName, getStack) {
-  if (process.env.NODE_ENV !== 'production') {
-    for (var typeSpecName in typeSpecs) {
-      if (has$1(typeSpecs, typeSpecName)) {
-        var error; // Prop type validation may throw. In case they do, we don't want to
-        // fail the render phase where it didn't fail before. So we log it.
-        // After these have been cleaned up, we'll let them throw.
-
-        try {
-          // This is intentionally an invariant that gets caught. It's the same
-          // behavior as without this statement except with a better message.
-          if (typeof typeSpecs[typeSpecName] !== 'function') {
-            var err = Error((componentName || 'React class') + ': ' + location + ' type `' + typeSpecName + '` is invalid; ' + 'it must be a function, usually from the `prop-types` package, but received `' + _typeof(typeSpecs[typeSpecName]) + '`.');
-            err.name = 'Invariant Violation';
-            throw err;
-          }
-
-          error = typeSpecs[typeSpecName](values, typeSpecName, componentName, location, null, ReactPropTypesSecret$2);
-        } catch (ex) {
-          error = ex;
-        }
-
-        if (error && !(error instanceof Error)) {
-          printWarning$1((componentName || 'React class') + ': type specification of ' + location + ' `' + typeSpecName + '` is invalid; the type checker ' + 'function must return `null` or an `Error` but returned a ' + _typeof(error) + '. ' + 'You may have forgotten to pass an argument to the type checker ' + 'creator (arrayOf, instanceOf, objectOf, oneOf, oneOfType, and ' + 'shape all require an argument).');
-        }
-
-        if (error instanceof Error && !(error.message in loggedTypeFailures)) {
-          // Only monitor this failure once because there tends to be a lot of the
-          // same error.
-          loggedTypeFailures[error.message] = true;
-          var stack = getStack ? getStack() : '';
-          printWarning$1('Failed ' + location + ' type: ' + error.message + (stack != null ? stack : ''));
-        }
-      }
-    }
-  }
-}
-/**
- * Resets warning cache when testing.
- *
- * @private
- */
-
-
-checkPropTypes$1.resetWarningCache = function () {
-  if (process.env.NODE_ENV !== 'production') {
-    loggedTypeFailures = {};
-  }
-};
-
-var checkPropTypes_1 = checkPropTypes$1;
-
-var ReactIs$1 = reactIs.exports;
-var assign = objectAssign;
-var ReactPropTypesSecret$1 = ReactPropTypesSecret_1;
-var checkPropTypes = checkPropTypes_1;
 var has = Function.call.bind(Object.prototype.hasOwnProperty);
 
 var printWarning = function printWarning() {};
@@ -630,7 +488,7 @@ function emptyFunctionThatReturnsNull() {
   return null;
 }
 
-var factoryWithTypeCheckers = function factoryWithTypeCheckers(isValidElement, throwOnDirectAccess) {
+module.exports = function (isValidElement, throwOnDirectAccess) {
   /* global Symbol */
   var ITERATOR_SYMBOL = typeof Symbol === 'function' && Symbol.iterator;
   var FAUX_ITERATOR_SYMBOL = '@@iterator'; // Before Symbol spec.
@@ -775,7 +633,7 @@ var factoryWithTypeCheckers = function factoryWithTypeCheckers(isValidElement, t
       componentName = componentName || ANONYMOUS;
       propFullName = propFullName || propName;
 
-      if (secret !== ReactPropTypesSecret$1) {
+      if (secret !== ReactPropTypesSecret$2) {
         if (throwOnDirectAccess) {
           // New behavior only for users of `prop-types` package
           var err = new Error('Calling PropTypes validators directly is not supported by the `prop-types` package. ' + 'Use `PropTypes.checkPropTypes()` to call them. ' + 'Read more at http://fb.me/use-check-prop-types');
@@ -851,7 +709,7 @@ var factoryWithTypeCheckers = function factoryWithTypeCheckers(isValidElement, t
       }
 
       for (var i = 0; i < propValue.length; i++) {
-        var error = typeChecker(propValue, i, componentName, location, propFullName + '[' + i + ']', ReactPropTypesSecret$1);
+        var error = typeChecker(propValue, i, componentName, location, propFullName + '[' + i + ']', ReactPropTypesSecret$2);
 
         if (error instanceof Error) {
           return error;
@@ -960,7 +818,7 @@ var factoryWithTypeCheckers = function factoryWithTypeCheckers(isValidElement, t
 
       for (var key in propValue) {
         if (has(propValue, key)) {
-          var error = typeChecker(propValue, key, componentName, location, propFullName + '.' + key, ReactPropTypesSecret$1);
+          var error = typeChecker(propValue, key, componentName, location, propFullName + '.' + key, ReactPropTypesSecret$2);
 
           if (error instanceof Error) {
             return error;
@@ -993,7 +851,7 @@ var factoryWithTypeCheckers = function factoryWithTypeCheckers(isValidElement, t
       for (var i = 0; i < arrayOfTypeCheckers.length; i++) {
         var checker = arrayOfTypeCheckers[i];
 
-        if (checker(props, propName, componentName, location, propFullName, ReactPropTypesSecret$1) == null) {
+        if (checker(props, propName, componentName, location, propFullName, ReactPropTypesSecret$2) == null) {
           return null;
         }
       }
@@ -1032,7 +890,7 @@ var factoryWithTypeCheckers = function factoryWithTypeCheckers(isValidElement, t
           continue;
         }
 
-        var error = checker(propValue, key, componentName, location, propFullName + '.' + key, ReactPropTypesSecret$1);
+        var error = checker(propValue, key, componentName, location, propFullName + '.' + key, ReactPropTypesSecret$2);
 
         if (error) {
           return error;
@@ -1065,7 +923,7 @@ var factoryWithTypeCheckers = function factoryWithTypeCheckers(isValidElement, t
           return new PropTypeError('Invalid ' + location + ' `' + propFullName + '` key `' + key + '` supplied to `' + componentName + '`.' + '\nBad object: ' + JSON.stringify(props[propName], null, '  ') + '\nValid keys: ' + JSON.stringify(Object.keys(shapeTypes), null, '  '));
         }
 
-        var error = checker(propValue, key, componentName, location, propFullName + '.' + key, ReactPropTypesSecret$1);
+        var error = checker(propValue, key, componentName, location, propFullName + '.' + key, ReactPropTypesSecret$2);
 
         if (error) {
           return error;
@@ -1233,6 +1091,22 @@ var factoryWithTypeCheckers = function factoryWithTypeCheckers(isValidElement, t
   return ReactPropTypes;
 };
 
+var factoryWithTypeCheckers = /*#__PURE__*/Object.freeze({
+  __proto__: null
+});
+
+var require$$1 = /*@__PURE__*/getAugmentedNamespace(factoryWithTypeCheckers);
+
+/**
+ * Copyright (c) 2013-present, Facebook, Inc.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+var ReactPropTypesSecret$1 = 'SECRET_DO_NOT_PASS_THIS_OR_YOU_WILL_BE_FIRED';
+var ReactPropTypesSecret_1 = ReactPropTypesSecret$1;
+
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -1248,7 +1122,7 @@ function emptyFunctionWithReset() {}
 
 emptyFunctionWithReset.resetWarningCache = emptyFunction;
 
-var factoryWithThrowingShims = function factoryWithThrowingShims() {
+var factoryWithThrowingShims = function () {
   function shim(props, propName, componentName, location, propFullName, secret) {
     if (secret === ReactPropTypesSecret) {
       // It is still safe when called from React.
@@ -1303,8 +1177,9 @@ if (process.env.NODE_ENV !== 'production') {
   var ReactIs = reactIs.exports; // By explicitly using `prop-types` you are opting into new development behavior.
   // http://fb.me/prop-types-in-prod
 
+
   var throwOnDirectAccess = true;
-  propTypes.exports = factoryWithTypeCheckers(ReactIs.isElement, throwOnDirectAccess);
+  propTypes.exports = require$$1(ReactIs.isElement, throwOnDirectAccess);
 } else {
   // By explicitly using `prop-types` you are opting into new production behavior.
   // http://fb.me/prop-types-in-prod
