@@ -26,6 +26,8 @@ function Charlotte({
   headingText = 'Get our how to guide',
   format = 'inline',
   backgroundImage = bgImage,
+  buttonColor = "rgb(255 255 255)",
+  buttonBackground = "rgb(246 166 171)",
 }) {
   useScript('https://f.convertkit.com/ckjs/ck.5.js')
 
@@ -53,7 +55,7 @@ function Charlotte({
               <div className="formkit-field">
                 <input className="formkit-input" aria-label={emailLabel} name="email_address" placeholder={emailPlaceholder} required type="email" style={{ color: 'rgb(139, 139, 139)', borderColor: 'rgb(221, 224, 228)', fontWeight: 400, borderLeft: 0, borderRight: 0, borderTop: 0, paddingLeft: 0, paddingRight: 0 }} id="ck-email" />
               </div>
-              <button data-element="submit" className="formkit-submit" style={{ width: '100%', color: 'rgb(255, 255, 255)', backgroundColor: 'rgb(246, 166, 171)', borderRadius: '3px', fontWeight: 700 }}>
+              <button data-element="submit" className="formkit-submit" style={{ width: '100%', color: buttonColor, backgroundColor: buttonBackground, borderRadius: '3px', fontWeight: 700 }}>
                 <div className="formkit-spinner">
                   <div></div>
                   <div></div>

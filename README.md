@@ -79,6 +79,8 @@ function HomePage() {
 |   hideWarnings   |  `Boolean`   |        `false`       | Hide warnings that are shown due to misconfiguration         |
 |   backgroundImage   |  `String`   | default on template | Use a different background image for your form |
 |   backgroundOpacity   |  `Number`   |  0.8   |  Opacity here is the inverse of what is on the app which really measures transparency  |
+|   buttonBackground   |  `String`   |  Varies per template   |  A [valid CSS color][1] string  |
+|   buttonColor   |  `String`   |  Varies per template   |  A [valid CSS color][1] string  |
 
 ##### Templates
 The minimal template has no preconfigured styling, leaving you options to style
@@ -104,3 +106,5 @@ To publish a package:
 ```
 
 where `X.X.X` is the version number.
+
+[1]: https://developer.mozilla.org/en-US/docs/Web/CSS/color_value

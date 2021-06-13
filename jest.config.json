@@ -1,0 +1,17 @@
+{
+  "clearMocks": true,
+
+  "testEnvironment": "jsdom",
+
+  "transform": {
+    "\\.[jt]sx?$": "babel-jest"
+  },
+
+  "moduleNameMapper": {
+    "^.+\\.(s?css|png|jpg|gif|svg(\\?inline)?)$": "<rootDir>/tests/styleMock.js"
+  },
+
+  "transformIgnorePatterns": [
+    "/node_modules/"
+  ]
+}

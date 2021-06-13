@@ -28,7 +28,9 @@ function Mills({
   emailLabel = 'Email',
   format = 'inline',
   headingText = 'Join the Newsletter',
-  children = <DefaultContent />
+  children = <DefaultContent />,
+  buttonColor = "rgb(255 255 255)",
+  buttonBackground = "rgb(22 119 190)",
 }) {
 
   useScript('https://f.convertkit.com/ckjs/ck.5.js')
@@ -59,7 +61,7 @@ function Mills({
             <div className="formkit-field">
               <input className="formkit-input" aria-label={emailLabel} name="email_address" placeholder={emailPlaceholder} required="" type="email" style={{ color: 'rgb(0 0 0)', borderColor: 'rgb(227 227 227)', borderRadius: '4px', fontWeight: 400 }} id="ck-email" />
             </div>
-            <button data-element="submit" className="formkit-submit formkit-submit" style={{ color: 'rgb(255 255 255)', backgroundColor: 'rgb(22 119 190)', borderRadius: '4px', fontWeight: 400 }}>
+            <button data-element="submit" className="formkit-submit formkit-submit" style={{ color: buttonColor, backgroundColor: buttonBackground, borderRadius: '4px', fontWeight: 400 }}>
               <div className="formkit-spinner">
                 <div></div>
                 <div></div>

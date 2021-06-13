@@ -32,7 +32,9 @@ function Powell({
   backgroundColor = [251,105,112],
   headingText = 'Join the newsletter',
   disclaimerText = "We won't send you spam. Unsubscribe at any time.",
-  children = <DefaultContent />
+  children = <DefaultContent />,
+  buttonColor = "rgb(255 255 255)",
+  buttonBackground = "rgb(251 105 112)",
 }) {
   const bgColor = backgroundColor.join(' ').concat(`/${backgroundOpacity}`)
 
@@ -66,7 +68,7 @@ function Powell({
               <div className="formkit-field">
                 <input className="formkit-input" aria-label={emailLabel} name="email_address" placeholder={emailPlaceholder} required type="email" style={{ color: 'rgb(77 77 77)', borderColor: 'rgb(227 227 227)', borderRadius: '4px', fontWeight: 400 }} id="ck-email" />
               </div>
-              <button data-element="submit" className="formkit-submit formkit-submit" style={{ color: 'rgb(255 255 255)', backgroundColor: 'rgb(251 105 112)', borderRadius: '24px', fontWeight: 700 }}>
+              <button data-element="submit" className="formkit-submit formkit-submit" style={{ color: buttonColor, backgroundColor: buttonBackground, borderRadius: '24px', fontWeight: 700 }}>
                 <div className="formkit-spinner">
                   <div></div>
                   <div></div>

@@ -32,7 +32,9 @@ function Rainier({
   backgroundOpacity = 0.8,
   backgroundColor = [16,16,16],
   headingText = 'Join the Newsletter',
-  children = <DefaultContent />
+  children = <DefaultContent />,
+  buttonColor = "rgb(255 255 255)",
+  buttonBackground = "rgb(199 92 86)",
 }) {
   const bgColor = backgroundColor.join(' ').concat(`/${backgroundOpacity}`)
 
@@ -68,7 +70,7 @@ function Rainier({
               <div className="formkit-field">
                 <input className="formkit-input" aria-label={emailLabel} name="email_address" placeholder={emailPlaceholder} required type="email" style={{ color: 'rgb(146 146 146)', borderColor: 'rgb(228 231 234)', borderRadius: 0, fontWeight: 400 }} id="ck-email" />
               </div>
-              <button data-element="submit" className="formkit-submit formkit-submit" style={{ color: 'rgb(255 255 255)', backgroundColor: 'rgb(199 92 86)', borderRadius: 0, fontWeight: 700 }} type="submit">
+              <button data-element="submit" className="formkit-submit formkit-submit" style={{ color: buttonColor, backgroundColor: buttonBackground, borderRadius: 0, fontWeight: 700 }} type="submit">
                 <div className="formkit-spinner">
                   <div></div>
                   <div></div>

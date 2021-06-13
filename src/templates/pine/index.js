@@ -29,7 +29,9 @@ function Pine({
   backgroundImage = null,
   thumbnailImage = null,
   headingText = 'Join the Newsletter',
-  children = <DefaultContent />
+  children = <DefaultContent />,
+  buttonColor = "rgb(255 255 255)",
+  buttonBackground = "rgb(22 119 90)",
 }) {
 
   const background = backgroundImage ? `linear-gradient(rgb(249 250 251/.8),rgb(249 250 251/.8)), url(${backgroundImage})` : 'rgb(249 250 251)'
@@ -66,7 +68,7 @@ function Pine({
               <div className="formkit-field">
                 <input className="formkit-input" aria-label={emailLabel} name="email_address" placeholder={emailPlaceholder} required type="email" style={{ color: 'rgb(0, 0, 0)', borderColor: 'rgb(227 227 227)', borderRadius: '4px', fontWeight: 400 }} id="ck-email" />
               </div>
-              <button data-element="submit" className="formkit-submit" style={{ color: 'rgb(255 255 255)', backgroundColor: 'rgb(22 119 190)', borderRadius: '24px', fontWeight: 700 }}>
+              <button data-element="submit" className="formkit-submit" style={{ color: buttonColor, backgroundColor: buttonBackground, borderRadius: '24px', fontWeight: 700 }}>
                 <div className="formkit-spinner">
                   <div></div>
                   <div></div>

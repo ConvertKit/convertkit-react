@@ -1,4 +1,3 @@
-
 import React from 'react'
 import './cocoa-styles.css'
 import Warning from '../../warning'
@@ -33,7 +32,9 @@ function Cocoa({
   backgroundColor = [46,46,46],
   borderRadius = 0,
   headingText = 'Join the waitlist',
-  children = <DefaultContent />
+  children = <DefaultContent />,
+  buttonColor = "rgb(255 255 255)",
+  buttonBackground = "rgb(245 113 72)",
 }) {
   const bgColor = backgroundColor.join(' ')
   const formRadius = `${borderRadius}px`
@@ -66,7 +67,7 @@ function Cocoa({
               <div className="formkit-field">
                 <input className="formkit-input" name="email_address" aria-label={emailLabel} placeholder={emailPlaceholder} required type="email" style={{color: 'rgb(105 113 119)', fontWeight: 400, backgroundColor: 'rgb(27 27 27)', borderRadius: '4px'}} />
               </div>
-              <button data-element="submit" className="formkit-submit formkit-submit" style={{color: 'rgb(255 255 255)', backgroundColor: 'rgb(245 113 72)', borderRadius: '4px', fontWeight: 700}}>
+              <button data-element="submit" className="formkit-submit formkit-submit" style={{color: buttonColor, backgroundColor: buttonBackground, borderRadius: '4px', fontWeight: 700}}>
                 <div className="formkit-spinner">
                   <div></div>
                   <div></div>

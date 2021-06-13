@@ -35,7 +35,9 @@ function Poplar({
   children = <DefaultContent />,
   backgroundImage = bgImage,
   headingText = 'Learn how to take photos like a pro',
-  borderRadius = 5
+  borderRadius = 5,
+  buttonColor = "rgb(255 255 255)",
+  buttonBackground = "rgb(120 94 223)",
 }) {
   const formRadius = `${borderRadius}px`
 
@@ -67,7 +69,7 @@ function Poplar({
               <div className="formkit-field">
                 <input className="formkit-input" name="email_address" aria-label={emailLabel} placeholder={emailPlaceholder} required type="email" style={{ color: 'rgb(105 113 119)', backgroundColor: 'rgb(243 246 249)', borderRadius: '5px', fontWeight: 400 }} />
               </div>
-              <button data-element="submit" className="formkit-submit formkit-submit" style={{ color: 'rgb(255 255 255)', backgroundColor: 'rgb(120 94 223)', borderRadius: '5px', fontWeight: 700 }}>
+              <button data-element="submit" className="formkit-submit formkit-submit" style={{ color: buttonColor, backgroundColor: buttonBackground, borderRadius: '5px', fontWeight: 700 }}>
                 <div className="formkit-spinner">
                   <div></div>
                   <div></div>

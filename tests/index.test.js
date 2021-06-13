@@ -1,7 +1,8 @@
 import React from 'react'
+import { jest } from '@jest/globals'
 import { render, screen } from '@testing-library/react'
 import '@testing-library/jest-dom/extend-expect'
-import ConvertKitForm from '../bin/convertkit-react.esm'
+import ConvertKitForm from '../src/index'
 
 const FORMID = 1234567
 
@@ -35,11 +36,11 @@ test('allows styling the form element through class', () => {
 
 test('shows warning when incorrect format is used on template', () => {
   const warningText = 'This template is not available for the chosen format'
-  const { getByText, container } = render(
+  const { container } = render(
     <ConvertKitForm formId={FORMID} format="sticky" template="mills" />
   )
   expect(container.querySelector('#ck-warn')).toBeInTheDocument()
-  expect(getByText(warningText)).toBeInTheDocument()
+  expect(screen.getByText(warningText)).toBeInTheDocument()
 })
 
 test('hides warning when user opts out', () => {
@@ -55,7 +56,7 @@ test('hides warning when user opts out', () => {
 })
 
 test('shows labels', () => {
-  const { getByLabelText } = render(
+  render(
     <ConvertKitForm
       formId={FORMID}
       template="mills"
@@ -63,12 +64,12 @@ test('shows labels', () => {
       showLabels={true}
     />
   )
-  expect(getByLabelText('First name')).toBeInTheDocument()
-  expect(getByLabelText('Email')).toBeInTheDocument()
+  expect(screen.getByLabelText('First name')).toBeInTheDocument()
+  expect(screen.getByLabelText('Email')).toBeInTheDocument()
 })
 
 test('allows custom label', () => {
-  const { getByLabelText } = render(
+  render(
     <ConvertKitForm
       formId={FORMID}
       template="mills"
@@ -78,8 +79,8 @@ test('allows custom label', () => {
       emailLabel="The end"
     />
   )
-  expect(getByLabelText('The beginning')).toBeInTheDocument()
-  expect(getByLabelText('The end')).toBeInTheDocument()
+  expect(screen.getByLabelText('The beginning')).toBeInTheDocument()
+  expect(screen.getByLabelText('The end')).toBeInTheDocument()
 })
 
 test('throws error when unavailable template is used', () => {
@@ -101,4 +102,12 @@ test('converts all templates to lowercase to find correct match', () => {
   expect(() => {
     render(<ConvertKitForm formId={FORMID} template="MINIMAL" />)
   }).not.toThrow(ReferenceError)
+})
+
+test('button color and background can be overriden', () => {
+  render(
+    <ConvertKitForm formId={FORMID} template="clare" buttonBackground="rgb(0, 0, 0)" />
+  )
+  const submitButton = screen.getByRole('button', { name: /subscribe/i })
+  expect(submitButton.style.backgroundColor).toEqual('rgb(0, 0, 0)')
 })

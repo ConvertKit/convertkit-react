@@ -32,7 +32,9 @@ function Monterey({
   backgroundColor = [51, 51, 51],
   borderRadius = 0,
   headingText = 'Join the newsletter',
-  children = <DefaultContent />
+  children = <DefaultContent />,
+  buttonColor = "rgb(255 255 255)",
+  buttonBackground = "rgb(51 51 51)",
 }) {
   const bgColor = backgroundColor.join(' ').concat(`/${backgroundOpacity}`)
   const formRadius = `${borderRadius}px`
@@ -67,7 +69,7 @@ function Monterey({
               <div className="formkit-field">
                 <input className="formkit-input" name="email_address" aria-label={emailLabel} placeholder={emailPlaceholder} required type="email" style={{ color: 'rgb(77 77 77)', borderColor: 'rgb(227 227 227)', borderRadius: 0, fontWeight: 400 }} />
               </div>
-              <button data-element="submit" className="formkit-submit formkit-submit" style={{ color: 'rgb(255 255 255)', backgroundColor: 'rgb(51 51 51)', borderRadius: 0, fontWeight: 400 }}>
+              <button data-element="submit" className="formkit-submit formkit-submit" style={{ color: buttonColor, backgroundColor: buttonBackground, borderRadius: 0, fontWeight: 400 }}>
                 <div className="formkit-spinner">
                   <div></div>
                   <div></div>
