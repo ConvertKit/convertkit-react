@@ -4,8 +4,10 @@
   <p>Easily plug convertkit forms to your React and Gatsby websites.</p>
 </div>
 
+Using Vue? Try [ConvertKit-Vue](https://github.com/ConvertKit/convertkit-vue)
 
-Using Vue? Try [ConvertKit-Vue](https://npm.im/convertkit-vue)
+Using Svelte? Try [ConvertKit-Svelte](https://github.com/ConvertKit/convertkit-svelte)
+
 ## Setup
 
 ```sh
